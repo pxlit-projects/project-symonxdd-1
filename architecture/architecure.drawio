@@ -1,0 +1,230 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="WEphMo-HLEEV3X7DvRez">
+    <mxGraphModel dx="2712" dy="1181" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="E4i4NGiqDtRsheVle9TG-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;arcSize=2;strokeColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="-541" y="105" width="1988" height="1425" as="geometry" />
+        </mxCell>
+        <mxCell id="j1595CyQF8AQ5eSYc9zP-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;dashed=1;strokeWidth=6;strokeColor=#515151;shadow=0;glass=0;fillColor=default;" parent="1" vertex="1">
+          <mxGeometry x="-491" y="496.25" width="251" height="367" as="geometry" />
+        </mxCell>
+        <mxCell id="j1595CyQF8AQ5eSYc9zP-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;dashed=1;strokeWidth=6;strokeColor=#515151;shadow=0;glass=0;fillColor=default;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="-114" y="349.25" width="1429" height="694.75" as="geometry" />
+        </mxCell>
+        <mxCell id="j1595CyQF8AQ5eSYc9zP-4" value="Client app" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#515151;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="-427.5" y="523.25" width="124" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j1595CyQF8AQ5eSYc9zP-6" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" parent="1" source="j1595CyQF8AQ5eSYc9zP-1" target="j1595CyQF8AQ5eSYc9zP-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j1595CyQF8AQ5eSYc9zP-7" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/21_Angular-512.png;" parent="1" vertex="1">
+          <mxGeometry x="-424.5" y="689.25" width="118" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="j1595CyQF8AQ5eSYc9zP-8" value="SPA Web app" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="-452" y="650.25" width="185" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j1595CyQF8AQ5eSYc9zP-9" value="TypeScript / Angular" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="-452" y="816.25" width="185" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j1595CyQF8AQ5eSYc9zP-10" value="Docker Host" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#515151;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="-89" y="376" width="124" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-5" value="Internal News Publishing System" style="text;whiteSpace=wrap;fontSize=24;fontStyle=1;fontColor=#5FB92E;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="141" y="278" width="407" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-7" value="architecture for case:" style="text;whiteSpace=wrap;fontSize=24;fontStyle=1;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="-114" y="278" width="253" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-10" value="Symon Blazejczak&#xa;3AON&#xa;Fullstack Java Project 2024-25 (examen 12-01-25)" style="text;whiteSpace=wrap;fontSize=18;fontStyle=0;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="-114" y="193" width="421" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-93" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;strokeColor=#515151;strokeWidth=3;startArrow=classic;startFill=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="429.0000000000002" y="508" as="sourcePoint" />
+            <mxPoint x="429" y="603" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-17" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;strokeColor=#515151;strokeWidth=2;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="404" y="377" width="268" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-18" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;strokeColor=#515151;strokeWidth=2;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="272.95" y="609" width="268" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.974;exitY=0.03;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;strokeWidth=3;strokeColor=#515151;exitPerimeter=0;" parent="1" source="7J5CiArNkN19BIXbOhHp-19" target="7J5CiArNkN19BIXbOhHp-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;strokeWidth=3;strokeColor=#515151;" parent="1" source="7J5CiArNkN19BIXbOhHp-19" target="7J5CiArNkN19BIXbOhHp-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-19" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;strokeColor=#515151;strokeWidth=2;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="-57" y="609" width="268" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-2" value="ReviewService" style="text;whiteSpace=wrap;fontSize=16;fontStyle=1;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="478.25" y="392" width="127.5" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-1" value="PostService" style="text;whiteSpace=wrap;fontSize=16;fontStyle=1;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="353.41999999999996" y="623" width="107.05" height="32.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-4" value="API Gateway" style="text;whiteSpace=wrap;fontSize=16;fontStyle=1;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="23" y="616" width="108" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-29" value="SQL Server DB" style="text;whiteSpace=wrap;fontSize=12;fontStyle=0;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="582" y="467.25" width="87" height="22.75" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-32" value="" style="shape=datastore;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;strokeColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="616.5" y="433.5" width="37" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-33" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/1200px-Spring_Framework_Logo_2018.svg.png;" parent="1" vertex="1">
+          <mxGeometry x="422.5" y="436.75" width="118.45" height="30.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-36" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.053;entryY=0.492;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;strokeWidth=3;strokeColor=#515151;" parent="1" source="7J5CiArNkN19BIXbOhHp-33" target="7J5CiArNkN19BIXbOhHp-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-40" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;strokeWidth=3;strokeColor=#515151;exitX=1.001;exitY=0.474;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-239.9989999999998" y="684.0979999999998" as="sourcePoint" />
+            <mxPoint x="-73.99" y="683.89" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-41" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/1200px-Spring_Framework_Logo_2018.svg.png;" parent="1" vertex="1">
+          <mxGeometry x="290.95" y="669" width="118.45" height="30.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-51" value="" style="shape=datastore;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;strokeColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="473.90000000000003" y="666" width="37" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-52" value="SQL Server DB" style="text;whiteSpace=wrap;fontSize=12;fontStyle=0;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="439.40000000000003" y="699.75" width="87" height="22.75" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-54" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.068;entryY=0.507;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;strokeWidth=3;strokeColor=#515151;" parent="1" source="7J5CiArNkN19BIXbOhHp-41" target="7J5CiArNkN19BIXbOhHp-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-62" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/1200px-Spring_Framework_Logo_2018.svg.png;" parent="1" vertex="1">
+          <mxGeometry x="-11.349999999999998" y="657" width="176.7" height="45.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-85" value="&lt;h1&gt;Communicatie tussen microservices&lt;/h1&gt;&lt;p&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;a. Synchrone communicatie (Spring Cloud OpenFeign)&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;Microservices&lt;/b&gt;&lt;b&gt;: &lt;/b&gt;PostService &amp;amp; ReviewService&lt;/p&gt;&lt;p&gt;Wanneer een gewone gebruiker of redacteur een post bekijkt, communiceert de app met de&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;PostService die via OpenFeign van CommentService de comments ophaalt.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Reden sync: &lt;/b&gt;Synchroon want een post bekijken vereist onmiddelijke feedback om de comments op te halen.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;b. Asynchrone communicatie (RabbitMQ)&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;Microservices&lt;/b&gt;&lt;b&gt;:&amp;nbsp;&lt;/b&gt;ReviewService&amp;nbsp;&amp;amp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;PostService&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Wanneer een post veranderd van status (ofwel naar approved, ofwel naar rejected) zal de app communiceren met de ReviewService om een melding te genereren en op te slaan in de PostService.&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Reden async: &lt;/b&gt;Dit mag asynchroon omdat de melding niet meteen moet zichtbaar zijn voor de ontvangende partij.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="-114" y="1071" width="789" height="462" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-94" value="&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 12px;&quot;&gt;sync comms&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fontColor=#FF3399;" parent="1" vertex="1">
+          <mxGeometry x="469.6" y="562" width="81" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="Mgi1emgovaLD4xNCO1vw-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://e4developer.com/wp-content/uploads/2018/01/spring-cloud-logo.png;" parent="1" vertex="1">
+          <mxGeometry x="478.25" y="516" width="51" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-90" value="&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 12px;&quot;&gt;Spring Cloud OpenFeign&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=12;fontStyle=0;fontColor=#515151;" parent="1" vertex="1">
+          <mxGeometry x="436" y="548" width="154.5" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-1" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;startArrow=classic;startFill=1;strokeWidth=3;strokeColor=#515151;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="831" y="666" as="sourcePoint" />
+            <mxPoint x="555" y="665.58" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-2" value="" style="shape=message;html=1;outlineConnect=0;fontSize=16;strokeColor=#515151;aspect=fixed;" parent="sp3VUnJ4BZgNpog1xi2Z-1" vertex="1">
+          <mxGeometry width="45.71" height="32" relative="1" as="geometry">
+            <mxPoint x="-22.86" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-5" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="1016" y="380" width="268" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-21" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;strokeColor=#515151;strokeWidth=2;dashed=1;" parent="sp3VUnJ4BZgNpog1xi2Z-5" vertex="1">
+          <mxGeometry width="268" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-20" value="Discovery Service" style="text;whiteSpace=wrap;fontSize=16;fontStyle=1;fontColor=#515151;" parent="sp3VUnJ4BZgNpog1xi2Z-5" vertex="1">
+          <mxGeometry x="64" y="5.5" width="140" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-64" value="Spring Cloud Netflix" style="text;whiteSpace=wrap;fontSize=12;fontColor=#515151;fontStyle=0" parent="sp3VUnJ4BZgNpog1xi2Z-5" vertex="1">
+          <mxGeometry x="79.64999999999992" y="89.5" width="120" height="20.63" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-86" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/1200px-Spring_Framework_Logo_2018.svg.png;" parent="sp3VUnJ4BZgNpog1xi2Z-5" vertex="1">
+          <mxGeometry x="51.2999999999999" y="44" width="176.7" height="45.5" as="geometry" />
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-7" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="1016" y="533" width="268" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-23" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;strokeColor=#515151;strokeWidth=2;dashed=1;" parent="sp3VUnJ4BZgNpog1xi2Z-7" vertex="1">
+          <mxGeometry width="268" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-22" value="Config Service" style="text;whiteSpace=wrap;fontSize=16;fontStyle=1;fontColor=#515151;" parent="sp3VUnJ4BZgNpog1xi2Z-7" vertex="1">
+          <mxGeometry x="76.5" y="3" width="115" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-88" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/1200px-Spring_Framework_Logo_2018.svg.png;" parent="sp3VUnJ4BZgNpog1xi2Z-7" vertex="1">
+          <mxGeometry x="45.64999999999998" y="44" width="176.7" height="45.5" as="geometry" />
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-11" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="860" y="378" width="75" height="644" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-16" value="&lt;font color=&quot;#515151&quot;&gt;Event Bus&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=3;fontStyle=1;strokeColor=#515151;" parent="sp3VUnJ4BZgNpog1xi2Z-11" vertex="1">
+          <mxGeometry width="75" height="644" as="geometry" />
+        </mxCell>
+        <mxCell id="7J5CiArNkN19BIXbOhHp-95" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn.freebiesupply.com/logos/large/2x/rabbitmq-logo-png-transparent.png;" parent="sp3VUnJ4BZgNpog1xi2Z-11" vertex="1">
+          <mxGeometry x="14" y="12.88" width="49.14" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-17" value="&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 12px;&quot;&gt;RabbitMQ&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=12;fontStyle=0;fontColor=#515151;" parent="sp3VUnJ4BZgNpog1xi2Z-11" vertex="1">
+          <mxGeometry x="9.57" y="79.856" width="58" height="32.2" as="geometry" />
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-15" value="&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 12px;&quot;&gt;async comms&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fontColor=#0066CC;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="725" y="390" width="83" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-16" value="&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 12px;&quot;&gt;async comms&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fontColor=#0066CC;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="653.5" y="620" width="85" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-18" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;startArrow=classic;startFill=1;strokeWidth=3;strokeColor=#515151;exitX=-0.012;exitY=0.878;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="858.5" y="436.75" as="sourcePoint" />
+            <mxPoint x="672" y="437.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sp3VUnJ4BZgNpog1xi2Z-19" value="" style="shape=message;html=1;outlineConnect=0;fontSize=16;strokeColor=#515151;aspect=fixed;" parent="sp3VUnJ4BZgNpog1xi2Z-18" vertex="1">
+          <mxGeometry width="45.71" height="32" relative="1" as="geometry">
+            <mxPoint x="-22.86" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fZD9T8TZY6duSfsb2dTa-7" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="272" y="835" width="268" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="fZD9T8TZY6duSfsb2dTa-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;strokeColor=#515151;strokeWidth=2;dashed=1;" parent="fZD9T8TZY6duSfsb2dTa-7" vertex="1">
+          <mxGeometry width="268" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="fZD9T8TZY6duSfsb2dTa-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/1200px-Spring_Framework_Logo_2018.svg.png;" parent="fZD9T8TZY6duSfsb2dTa-7" vertex="1">
+          <mxGeometry x="15" y="55" width="118.45" height="30.5" as="geometry" />
+        </mxCell>
+        <mxCell id="fZD9T8TZY6duSfsb2dTa-3" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.1;entryY=0.514;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;strokeWidth=3;strokeColor=#515151;" parent="fZD9T8TZY6duSfsb2dTa-7" source="fZD9T8TZY6duSfsb2dTa-2" target="fZD9T8TZY6duSfsb2dTa-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fZD9T8TZY6duSfsb2dTa-4" value="" style="shape=datastore;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;strokeColor=#515151;" parent="fZD9T8TZY6duSfsb2dTa-7" vertex="1">
+          <mxGeometry x="206.5" y="52" width="37" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="fZD9T8TZY6duSfsb2dTa-5" value="CommentService" style="text;whiteSpace=wrap;fontSize=16;fontStyle=1;fontColor=#515151;" parent="fZD9T8TZY6duSfsb2dTa-7" vertex="1">
+          <mxGeometry x="46.5" y="3" width="175" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="fZD9T8TZY6duSfsb2dTa-6" value="SQL Server DB" style="text;whiteSpace=wrap;fontSize=12;fontStyle=0;fontColor=#515151;" parent="fZD9T8TZY6duSfsb2dTa-7" vertex="1">
+          <mxGeometry x="172" y="85.75" width="87" height="22.75" as="geometry" />
+        </mxCell>
+        <mxCell id="fZD9T8TZY6duSfsb2dTa-49" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.015;entryY=0.441;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;strokeWidth=3;strokeColor=#515151;entryPerimeter=0;" parent="1" edge="1" target="fZD9T8TZY6duSfsb2dTa-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="195.6" y="737" as="sourcePoint" />
+            <mxPoint x="469.6" y="888" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NeZ0Nwy4Vd1KX595K4cU-4" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;strokeColor=#515151;strokeWidth=3;startArrow=classic;startFill=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="409.4000000000002" y="735" as="sourcePoint" />
+            <mxPoint x="409.4" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NeZ0Nwy4Vd1KX595K4cU-5" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://e4developer.com/wp-content/uploads/2018/01/spring-cloud-logo.png;" vertex="1" parent="1">
+          <mxGeometry x="433.25" y="745" width="51" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="NeZ0Nwy4Vd1KX595K4cU-6" value="&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 12px;&quot;&gt;Spring Cloud OpenFeign&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=12;fontStyle=0;fontColor=#515151;" vertex="1" parent="1">
+          <mxGeometry x="391" y="777" width="154.5" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="NeZ0Nwy4Vd1KX595K4cU-7" value="&lt;span style=&quot;border-color: var(--border-color); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 12px;&quot;&gt;sync comms&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fontColor=#FF3399;" vertex="1" parent="1">
+          <mxGeometry x="424.6" y="791" width="81" height="21" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
