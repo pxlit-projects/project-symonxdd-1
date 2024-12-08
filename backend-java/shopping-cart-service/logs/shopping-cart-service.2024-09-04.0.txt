@@ -1,0 +1,172 @@
+2024-09-04T19:32:56.629+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 17.0.4.1 with PID 29116 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T19:32:56.630+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T19:32:56.631+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T19:32:59.178+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 4.028 seconds (process running for 5.095)
+2024-09-04T19:32:59.363+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:32:59.375+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:32:59.392+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T19:32:59.484+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:32:59.490+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T19:32:59.504+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:33:19.203+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 17.0.4.1 with PID 23784 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T19:33:19.205+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T19:33:19.206+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T19:33:21.611+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 3.859 seconds (process running for 4.948)
+2024-09-04T19:33:21.783+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:33:21.792+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:33:21.805+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T19:33:21.893+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:33:21.899+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T19:33:21.905+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:33:42.097+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 17.0.4.1 with PID 2516 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T19:33:42.099+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T19:33:42.100+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T19:33:44.476+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 3.852 seconds (process running for 5.069)
+2024-09-04T19:33:44.637+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:33:44.648+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:33:44.663+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T19:33:44.742+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:33:44.749+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T19:33:44.755+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:49:21.513+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 17.0.4.1 with PID 16868 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T19:49:21.514+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T19:49:21.516+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T19:49:24.964+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 5.574 seconds (process running for 7.586)
+2024-09-04T19:49:25.274+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:49:25.290+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:49:25.314+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T19:49:25.481+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:49:25.491+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T19:49:25.500+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:50:48.509+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 18.0.2.1 with PID 25104 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T19:50:48.511+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T19:50:48.511+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T19:50:51.286+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 4.819 seconds (process running for 6.704)
+2024-09-04T19:50:51.457+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:50:51.466+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:50:51.479+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T19:50:51.572+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:50:51.578+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T19:50:51.584+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:51:23.719+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 18.0.2.1 with PID 21380 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T19:51:23.721+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T19:51:23.722+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T19:51:26.438+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 4.701 seconds (process running for 6.435)
+2024-09-04T19:51:26.600+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:51:26.608+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:51:26.620+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T19:51:26.718+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:51:26.724+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T19:51:26.730+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:53:07.670+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 18.0.2.1 with PID 17688 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T19:53:07.672+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T19:53:07.673+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T19:53:10.342+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 4.666 seconds (process running for 6.528)
+2024-09-04T19:53:10.494+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:53:10.502+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:53:10.513+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T19:53:10.610+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:53:10.616+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T19:53:10.623+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:53:31.895+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 18.0.2.1 with PID 27640 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T19:53:31.896+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T19:53:31.897+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T19:53:34.638+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 4.698 seconds (process running for 6.641)
+2024-09-04T19:53:34.804+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:53:34.814+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T19:53:34.832+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T19:53:34.939+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T19:53:34.945+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T19:53:34.953+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T20:38:37.750+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 17.0.4.1 with PID 18948 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T20:38:37.752+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T20:38:37.753+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T20:38:41.355+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 5.689 seconds (process running for 7.469)
+2024-09-04T20:38:41.625+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T20:38:41.636+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T20:38:41.661+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T20:38:41.806+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T20:38:41.815+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T20:38:41.825+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T20:45:15.015+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Starting ShoppingCartServiceApplicationTests using Java 17.0.4.1 with PID 27360 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T20:45:15.018+0200 DEBUG b.p.s.ShoppingCartServiceApplicationTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T20:45:15.018+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T20:45:20.842+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Started ShoppingCartServiceApplicationTests in 7.11 seconds (process running for 8.15)
+2024-09-04T20:45:29.403+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Starting ShoppingCartServiceApplicationTests using Java 17.0.4.1 with PID 27368 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T20:45:29.406+0200 DEBUG b.p.s.ShoppingCartServiceApplicationTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T20:45:29.406+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T20:45:35.086+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Started ShoppingCartServiceApplicationTests in 6.966 seconds (process running for 7.933)
+2024-09-04T20:46:02.303+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 17.0.4.1 with PID 26432 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T20:46:02.305+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T20:46:02.306+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T20:46:05.548+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 5.191 seconds (process running for 6.87)
+2024-09-04T20:46:05.838+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T20:46:05.852+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T20:46:05.874+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T20:46:06.020+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T20:46:06.028+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T20:46:06.038+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T20:46:06.372+0200 INFO  b.p.s.services.CartServiceImpl - Fetching all items for role: user
+2024-09-04T20:46:06.374+0200 INFO  b.p.s.services.CartServiceImpl - All items fetched for role: user
+2024-09-04T20:46:06.387+0200 INFO  b.p.s.services.CartServiceImpl - Deleting product with id: 1
+2024-09-04T20:46:06.393+0200 INFO  b.p.s.services.CartServiceImpl - Updating quantity of product with id: 1
+2024-09-04T20:46:06.396+0200 INFO  b.p.s.services.CartServiceImpl - Quantity updated for product: [FAILED toString()]
+2024-09-04T20:46:06.416+0200 INFO  b.p.s.services.CartServiceImpl - Deleting all products from cart for role: user
+2024-09-04T20:46:06.417+0200 INFO  b.p.s.services.CartServiceImpl - All products removed from cart for role: user
+2024-09-04T20:46:06.423+0200 INFO  b.p.s.services.CartServiceImpl - Adding product with id: 1
+2024-09-04T20:46:06.431+0200 INFO  b.p.s.services.CartServiceImpl - Adding product with id: 1
+2024-09-04T20:46:06.431+0200 INFO  b.p.s.services.CartServiceImpl - ProductCatalogClient response: null
+2024-09-04T20:46:06.434+0200 INFO  b.p.s.services.CartServiceImpl - Deleting product with id: 1
+2024-09-04T20:46:06.441+0200 INFO  b.p.s.services.CartServiceImpl - Adding product with id: 1
+2024-09-04T20:46:06.442+0200 INFO  b.p.s.services.CartServiceImpl - ProductCatalogClient response: ProductDTO(id=null, name=Product, price=100)
+2024-09-04T20:46:06.443+0200 INFO  b.p.s.services.CartServiceImpl - Product added to cart: [FAILED toString()]
+2024-09-04T20:46:06.458+0200 INFO  b.p.s.services.CartServiceImpl - Updating quantity of product with id: 1
+2024-09-04T20:46:06.462+0200 INFO  b.p.s.services.CartServiceImpl - Updating quantity of product with id: 1
+2024-09-04T20:46:06.467+0200 INFO  b.p.s.services.CartServiceImpl - Deleting product with id: 1
+2024-09-04T20:46:06.468+0200 INFO  b.p.s.services.CartServiceImpl - Product removed from cart: CartItem(id=null, cart=null, productId=1, productName=null, productPrice=null, quantity=null)
+2024-09-04T20:46:06.481+0200 INFO  b.p.s.services.CartServiceImpl - Fetching all items for role: user
+2024-09-04T20:46:07.407+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Starting ShoppingCartServiceApplicationTests using Java 17.0.4.1 with PID 26432 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T20:46:07.408+0200 DEBUG b.p.s.ShoppingCartServiceApplicationTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T20:46:07.408+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T20:46:13.600+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Started ShoppingCartServiceApplicationTests in 7.065 seconds (process running for 14.921)
+2024-09-04T20:48:07.252+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Starting ShoppingCartServiceApplicationTests using Java 17.0.4.1 with PID 18608 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T20:48:07.254+0200 DEBUG b.p.s.ShoppingCartServiceApplicationTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T20:48:07.255+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T20:48:12.830+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Started ShoppingCartServiceApplicationTests in 6.825 seconds (process running for 7.832)
+2024-09-04T20:48:33.417+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Starting ShoppingCartServiceApplicationTests using Java 17.0.4.1 with PID 30428 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T20:48:33.418+0200 DEBUG b.p.s.ShoppingCartServiceApplicationTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T20:48:33.419+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T20:48:39.362+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Started ShoppingCartServiceApplicationTests in 7.185 seconds (process running for 8.216)
+2024-09-04T21:43:20.433+0200 INFO  b.p.s.controller.CartControllerTests - Starting CartControllerTests using Java 17.0.4.1 with PID 24520 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T21:43:20.435+0200 DEBUG b.p.s.controller.CartControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T21:43:20.436+0200 INFO  b.p.s.controller.CartControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T21:43:24.576+0200 INFO  b.p.s.controller.CartControllerTests - Started CartControllerTests in 6.43 seconds (process running for 8.385)
+2024-09-04T21:43:24.875+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T21:43:24.890+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T21:43:24.916+0200 INFO  b.p.s.controller.CartController - Fetching all cart items for role: user
+2024-09-04T21:43:25.086+0200 INFO  b.p.s.controller.CartController - Deleting product from cart for role: user
+2024-09-04T21:43:25.096+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: admin
+2024-09-04T21:43:25.107+0200 INFO  b.p.s.controller.CartController - Adding product to cart for role: user
+2024-09-04T21:43:25.494+0200 INFO  b.p.s.services.CartServiceImpl - Fetching all items for role: user
+2024-09-04T21:43:25.495+0200 INFO  b.p.s.services.CartServiceImpl - All items fetched for role: user
+2024-09-04T21:43:25.509+0200 INFO  b.p.s.services.CartServiceImpl - Deleting product with id: 1
+2024-09-04T21:43:25.516+0200 INFO  b.p.s.services.CartServiceImpl - Updating quantity of product with id: 1
+2024-09-04T21:43:25.519+0200 INFO  b.p.s.services.CartServiceImpl - Quantity updated for product: [FAILED toString()]
+2024-09-04T21:43:25.539+0200 INFO  b.p.s.services.CartServiceImpl - Deleting all products from cart for role: user
+2024-09-04T21:43:25.540+0200 INFO  b.p.s.services.CartServiceImpl - All products removed from cart for role: user
+2024-09-04T21:43:25.545+0200 INFO  b.p.s.services.CartServiceImpl - Adding product with id: 1
+2024-09-04T21:43:25.552+0200 INFO  b.p.s.services.CartServiceImpl - Adding product with id: 1
+2024-09-04T21:43:25.552+0200 INFO  b.p.s.services.CartServiceImpl - ProductCatalogClient response: null
+2024-09-04T21:43:25.557+0200 INFO  b.p.s.services.CartServiceImpl - Deleting product with id: 1
+2024-09-04T21:43:25.561+0200 INFO  b.p.s.services.CartServiceImpl - Adding product with id: 1
+2024-09-04T21:43:25.562+0200 INFO  b.p.s.services.CartServiceImpl - ProductCatalogClient response: ProductDTO(id=null, name=Product, price=100)
+2024-09-04T21:43:25.563+0200 INFO  b.p.s.services.CartServiceImpl - Product added to cart: [FAILED toString()]
+2024-09-04T21:43:25.576+0200 INFO  b.p.s.services.CartServiceImpl - Updating quantity of product with id: 1
+2024-09-04T21:43:25.582+0200 INFO  b.p.s.services.CartServiceImpl - Updating quantity of product with id: 1
+2024-09-04T21:43:25.586+0200 INFO  b.p.s.services.CartServiceImpl - Deleting product with id: 1
+2024-09-04T21:43:25.586+0200 INFO  b.p.s.services.CartServiceImpl - Product removed from cart: CartItem(id=null, cart=null, productId=1, productName=null, productPrice=null, quantity=null)
+2024-09-04T21:43:25.598+0200 INFO  b.p.s.services.CartServiceImpl - Fetching all items for role: user
+2024-09-04T21:43:26.627+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Starting ShoppingCartServiceApplicationTests using Java 17.0.4.1 with PID 24520 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\shopping-cart-service)
+2024-09-04T21:43:26.628+0200 DEBUG b.p.s.ShoppingCartServiceApplicationTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T21:43:26.628+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T21:43:33.211+0200 INFO  b.p.s.ShoppingCartServiceApplicationTests - Started ShoppingCartServiceApplicationTests in 7.581 seconds (process running for 17.02)

@@ -1,0 +1,38 @@
+2024-09-05T08:11:36.118+0200 INFO  b.p.s.c.WishlistControllerTests - Starting WishlistControllerTests using Java 18.0.2.1 with PID 5588 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\wishlist-service)
+2024-09-05T08:11:36.122+0200 DEBUG b.p.s.c.WishlistControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-05T08:11:36.123+0200 INFO  b.p.s.c.WishlistControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-05T08:11:38.736+0200 INFO  b.p.s.c.WishlistControllerTests - Started WishlistControllerTests in 4.438 seconds (process running for 6.131)
+2024-09-05T08:11:38.841+0200 INFO  b.p.s.controller.WishlistController - Updating wishlist item quantity with product ID 1 from wishlist for role: user
+2024-09-05T08:11:38.904+0200 INFO  b.p.s.controller.WishlistController - Deleting product with ID 1 from wishlist for role: user
+2024-09-05T08:11:38.922+0200 INFO  b.p.s.controller.WishlistController - Fetching all wishlist items for role: user
+2024-09-05T08:11:39.021+0200 INFO  b.p.s.controller.WishlistController - Adding product with ID 1 to wishlist for role: user
+2024-09-05T08:11:39.027+0200 INFO  b.p.s.controller.WishlistController - Updating wishlist item quantity with product ID 1 from wishlist for role: admin
+2024-09-05T08:11:39.033+0200 INFO  b.p.s.controller.WishlistController - Deleting product with ID 1 from wishlist for role: user
+2024-09-05T08:11:39.298+0200 INFO  b.p.s.services.WishlistServiceImpl - Adding product with id: 1
+2024-09-05T08:11:39.303+0200 INFO  b.p.s.services.WishlistServiceImpl - Deleting product with id: 1
+2024-09-05T08:11:39.307+0200 INFO  b.p.s.services.WishlistServiceImpl - Adding product with id: 1
+2024-09-05T08:11:39.307+0200 INFO  b.p.s.services.WishlistServiceImpl - Product with id 1 added to wishlist
+2024-09-05T08:11:39.316+0200 INFO  b.p.s.services.WishlistServiceImpl - Deleting product with id: 1
+2024-09-05T08:11:39.316+0200 INFO  b.p.s.services.WishlistServiceImpl - Product with id 1 removed from wishlist
+2024-09-05T08:11:39.320+0200 INFO  b.p.s.services.WishlistServiceImpl - Fetching all items for role: user
+2024-09-05T08:11:39.321+0200 INFO  b.p.s.services.WishlistServiceImpl - All items fetched for role: user
+2024-09-05T08:11:39.326+0200 INFO  b.p.s.services.WishlistServiceImpl - Fetching all items for role: user
+2024-09-05T08:19:11.573+0200 INFO  b.p.s.c.WishlistControllerTests - Starting WishlistControllerTests using Java 18.0.2.1 with PID 31088 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\wishlist-service)
+2024-09-05T08:19:11.574+0200 DEBUG b.p.s.c.WishlistControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-05T08:19:11.575+0200 INFO  b.p.s.c.WishlistControllerTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-05T08:19:14.154+0200 INFO  b.p.s.c.WishlistControllerTests - Started WishlistControllerTests in 4.579 seconds (process running for 6.353)
+2024-09-05T08:19:14.238+0200 INFO  b.p.s.controller.WishlistController - Updating wishlist item quantity with product ID 1 from wishlist for role: user
+2024-09-05T08:19:14.297+0200 INFO  b.p.s.controller.WishlistController - Deleting product with ID 1 from wishlist for role: user
+2024-09-05T08:19:14.314+0200 INFO  b.p.s.controller.WishlistController - Fetching all wishlist items for role: user
+2024-09-05T08:19:14.419+0200 INFO  b.p.s.controller.WishlistController - Adding product with ID 1 to wishlist for role: user
+2024-09-05T08:19:14.425+0200 INFO  b.p.s.controller.WishlistController - Updating wishlist item quantity with product ID 1 from wishlist for role: admin
+2024-09-05T08:19:14.429+0200 INFO  b.p.s.controller.WishlistController - Deleting product with ID 1 from wishlist for role: user
+2024-09-05T08:19:14.692+0200 INFO  b.p.s.services.WishlistServiceImpl - Adding product with id: 1
+2024-09-05T08:19:14.695+0200 INFO  b.p.s.services.WishlistServiceImpl - Deleting product with id: 1
+2024-09-05T08:19:14.699+0200 INFO  b.p.s.services.WishlistServiceImpl - Adding product with id: 1
+2024-09-05T08:19:14.700+0200 INFO  b.p.s.services.WishlistServiceImpl - Product with id 1 added to wishlist
+2024-09-05T08:19:14.705+0200 INFO  b.p.s.services.WishlistServiceImpl - Deleting product with id: 1
+2024-09-05T08:19:14.705+0200 INFO  b.p.s.services.WishlistServiceImpl - Product with id 1 removed from wishlist
+2024-09-05T08:19:14.708+0200 INFO  b.p.s.services.WishlistServiceImpl - Fetching all items for role: user
+2024-09-05T08:19:14.709+0200 INFO  b.p.s.services.WishlistServiceImpl - All items fetched for role: user
+2024-09-05T08:19:14.712+0200 INFO  b.p.s.services.WishlistServiceImpl - Fetching all items for role: user

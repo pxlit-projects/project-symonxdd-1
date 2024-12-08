@@ -1,0 +1,24 @@
+2024-09-04T21:22:11.300+0200 INFO  b.p.s.c.RabbitConfigurationTests - Starting RabbitConfigurationTests using Java 17.0.4.1 with PID 33440 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\logbook-service)
+2024-09-04T21:22:11.302+0200 DEBUG b.p.s.c.RabbitConfigurationTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T21:22:11.303+0200 INFO  b.p.s.c.RabbitConfigurationTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T21:22:16.921+0200 INFO  b.p.s.c.RabbitConfigurationTests - Started RabbitConfigurationTests in 7.036 seconds (process running for 8.169)
+2024-09-04T21:34:37.666+0200 INFO  b.p.s.c.RabbitConfigurationTests - Starting RabbitConfigurationTests using Java 17.0.4.1 with PID 29356 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\logbook-service)
+2024-09-04T21:34:37.667+0200 DEBUG b.p.s.c.RabbitConfigurationTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T21:34:37.668+0200 INFO  b.p.s.c.RabbitConfigurationTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T21:34:43.370+0200 INFO  b.p.s.c.RabbitConfigurationTests - Started RabbitConfigurationTests in 7.09 seconds (process running for 51.193)
+2024-09-04T21:36:26.341+0200 INFO  b.p.s.c.RabbitConfigurationTests - Starting RabbitConfigurationTests using Java 17.0.4.1 with PID 32636 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\logbook-service)
+2024-09-04T21:36:26.344+0200 DEBUG b.p.s.c.RabbitConfigurationTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T21:36:26.345+0200 INFO  b.p.s.c.RabbitConfigurationTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T21:36:33.878+0200 INFO  b.p.s.c.RabbitConfigurationTests - Started RabbitConfigurationTests in 9.411 seconds (process running for 27.95)
+2024-09-04T21:36:34.945+0200 INFO  b.pxl.services.services.QueueService - Product ID: 3, Rol: guest
+2024-09-04T21:36:34.954+0200 INFO  b.pxl.services.services.QueueService - Product ID: 1, Rol: admin, Naam van 'OldName' naar 'NewName', Beschrijving van 'OldDescription' naar 'NewDescription', Prijs van '100' naar '150', Voorraad van '10' naar '20', Category van 'OldCategory' naar 'NewCategory'
+2024-09-04T21:36:34.958+0200 INFO  b.pxl.services.services.QueueService - Product ID: 2, Rol: user, Naam van 'OldName' naar 'null', Beschrijving van 'null' naar 'NewDescription', Prijs van 'null' naar '200', Voorraad van '5' naar 'null', Category van 'null' naar 'NewCategory'
+2024-09-04T21:36:34.964+0200 WARN  b.pxl.services.services.QueueService - Received null message from queue
+2024-09-04T21:41:39.222+0200 INFO  b.p.s.services.QueueServiceTests - Starting QueueServiceTests using Java 17.0.4.1 with PID 22344 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\logbook-service)
+2024-09-04T21:41:39.223+0200 DEBUG b.p.s.services.QueueServiceTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T21:41:39.225+0200 INFO  b.p.s.services.QueueServiceTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T21:41:39.517+0200 INFO  b.p.s.services.QueueServiceTests - Started QueueServiceTests in 1.697 seconds (process running for 17.218)
+2024-09-04T21:44:25.814+0200 INFO  b.p.s.c.RabbitConfigurationTests - Starting RabbitConfigurationTests using Java 17.0.4.1 with PID 7624 (started by Symon in C:\Users\Symon\Documents\College 2023-24\Fullstack Java\GitHub\2de-zit-symonxdd\backend-java\logbook-service)
+2024-09-04T21:44:25.816+0200 DEBUG b.p.s.c.RabbitConfigurationTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-09-04T21:44:25.817+0200 INFO  b.p.s.c.RabbitConfigurationTests - No active profile set, falling back to 1 default profile: "default"
+2024-09-04T21:44:32.776+0200 INFO  b.p.s.c.RabbitConfigurationTests - Started RabbitConfigurationTests in 8.82 seconds (process running for 25.981)

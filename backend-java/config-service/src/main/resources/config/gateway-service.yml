@@ -1,0 +1,54 @@
+server:
+  port: 6969
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          "[/**]":
+            allowedOrigins:
+              - "localhost"
+            allowedMethods:
+              - "*"
+            allowedCredentials: true
+      discovery:
+        locator:
+          enabled: true
+          # Maar eerst moeten we de integratie met de discovery server voor de routes inschakelen door de eigenschap
+
+      # We gebruiken de Path Route Predicate Factory voor het matchen van de inkomende verzoeken en de RewritePath GatewayFilter Factory voor het wijzigen van het gevraagde pad om het aan te passen aan het formaat dat wordt weergegeven door downstream-services. De parameter uri specificeert de naam van de doelservice die is geregistreerd in de detectieserver. Laten we eens kijken naar de volgende routesdefinitie. Om bijvoorbeeld organisatie-service beschikbaar te maken op gateway onder pad /organisatie/**, moeten we het predikaat Path=/organisatie/** definiëren en vervolgens het voorvoegsel /organisatie van het pad verwijderen, omdat de doelservice wordt weergegeven onder pad /**. Het adres van de doelservice wordt opgehaald voor Eureka-gebaseerde uri-waarde lb://organization-service.
+      routes:
+        - id: product-catalog-service
+          uri: lb://product-catalog-service
+          predicates:
+            - Path=/product-catalog/**
+          filters:
+            - RewritePath=/product-catalog/(?<path>.*), /$\{path}
+        - id: shopping-cart-service
+          uri: lb://shopping-cart-service
+          predicates:
+            - Path=/shopping-cart/**
+          filters:
+            - RewritePath=/shopping-cart/(?<path>.*), /$\{path}
+        - id: logbook-service
+          uri: lb://logbook-service
+          predicates:
+            - Path=/logbook/**
+          filters:
+            - RewritePath=/logbook/(?<path>.*), /$\{path}
+        - id: wishlist-service
+          uri: lb://wishlist-service
+          predicates:
+            - Path=/wishlist/**
+          filters:
+            - RewritePath=/wishlist/(?<path>.*), /$\{path}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN: -%5p} %m%n"
