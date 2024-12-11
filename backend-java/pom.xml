@@ -16,14 +16,10 @@
   <name>SpringCloudPXL</name>
   <description>SpringCloudPXL</description>
   <modules>
-    <module>product-catalog-service</module>
     <module>discovery-service</module>
     <module>config-service</module>
     <module>gateway-service</module>
-    <module>shopping-cart-service</module>
-    <module>logbook-service</module>
-    <module>wishlist-service</module>
-      <module>post-service</module>
+    <module>post-service</module>
     <module>review-service</module>
     <module>comment-service</module>
   </modules>

@@ -1,49 +1,38 @@
 version: "3.3"
 
 services:
-  product-catalog-service-db:
+  post-service-db:
     image: mysql:latest
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: 'product_catalog_service_db'
+      MYSQL_DATABASE: 'post_service_db'
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'sa'
       MYSQL_ROOT_PASSWORD: 'admin'
       MYSQL_TCP_PORT: 3306
 
-  shopping-cart-service-db:
+  comment-service-db:
     image: mysql:latest
     ports:
       - "3307:3307"
     environment:
-      MYSQL_DATABASE: 'shopping_cart_service_db'
+      MYSQL_DATABASE: 'comment_service_db'
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'sa'
       MYSQL_ROOT_PASSWORD: 'admin'
       MYSQL_TCP_PORT: 3307
 
-  logbook-service-db:
+  review-service-db:
     image: mysql:latest
     ports:
       - "3308:3308"
     environment:
-      MYSQL_DATABASE: 'logbook_service_db'
+      MYSQL_DATABASE: 'review_service_db'
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'sa'
       MYSQL_ROOT_PASSWORD: 'admin'
       MYSQL_TCP_PORT: 3308
-
-  wishlist-service-db:
-    image: mysql:latest
-    ports:
-      - "3309:3309"
-    environment:
-      MYSQL_DATABASE: 'wishlist_service_db'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'sa'
-      MYSQL_ROOT_PASSWORD: 'admin'
-      MYSQL_TCP_PORT: 3309
 
   rabbitmq:
     image: rabbitmq:management

@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration; // Import the Confi
 import org.springframework.web.cors.CorsConfiguration; // Import CorsConfiguration to configure CORS settings
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource; // Import UrlBasedCorsConfigurationSource for configuring CORS in a reactive manner
 
-import be.pxl.services.GatewayServiceApplication;
+import be.pxl.services.GatewayServiceApp;
 
 import org.springframework.web.cors.reactive.CorsWebFilter; // Import CorsWebFilter to apply CORS configuration globally
 
@@ -17,7 +17,7 @@ import java.util.Arrays; // Import Arrays utility for convenient array operation
 @Configuration // Indicates that this class contains Spring configuration
 public class GatewayConfig {
 
-  private static final Logger logger = LoggerFactory.getLogger(GatewayServiceApplication.class);
+  private static final Logger logger = LoggerFactory.getLogger(GatewayServiceApp.class);
 
   @Bean // Declares this method as a Spring bean
   public CorsWebFilter corsWebFilter() {

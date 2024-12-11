@@ -9,12 +9,12 @@ import org.slf4j.LoggerFactory;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class GatewayServiceApplication {
+public class GatewayServiceApp {
 
-  private static final Logger logger = LoggerFactory.getLogger(GatewayServiceApplication.class);
+  private static final Logger logger = LoggerFactory.getLogger(GatewayServiceApp.class);
 
   public static void main(String[] args) {
-    logger.info("Starting GatewayServiceApplication");
-    SpringApplication.run(GatewayServiceApplication.class, args);
+    logger.info("Starting GatewayServiceApp...");
+    SpringApplication.run(GatewayServiceApp.class, args);
   }
 }
