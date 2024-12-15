@@ -19,30 +19,24 @@ spring:
 
       # We gebruiken de Path Route Predicate Factory voor het matchen van de inkomende verzoeken en de RewritePath GatewayFilter Factory voor het wijzigen van het gevraagde pad om het aan te passen aan het formaat dat wordt weergegeven door downstream-services. De parameter uri specificeert de naam van de doelservice die is geregistreerd in de detectieserver. Laten we eens kijken naar de volgende routesdefinitie. Om bijvoorbeeld organisatie-service beschikbaar te maken op gateway onder pad /organisatie/**, moeten we het predikaat Path=/organisatie/** definiëren en vervolgens het voorvoegsel /organisatie van het pad verwijderen, omdat de doelservice wordt weergegeven onder pad /**. Het adres van de doelservice wordt opgehaald voor Eureka-gebaseerde uri-waarde lb://organization-service.
       routes:
-        - id: product-catalog-service
-          uri: lb://product-catalog-service
+        - id: post-service
+          uri: lb://post-service
           predicates:
-            - Path=/product-catalog/**
+            - Path=/post/**
           filters:
-            - RewritePath=/product-catalog/(?<path>.*), /$\{path}
-        - id: shopping-cart-service
-          uri: lb://shopping-cart-service
+            - RewritePath=/post/(?<path>.*), /$\{path}
+        - id: comment-service
+          uri: lb://comment-service
           predicates:
-            - Path=/shopping-cart/**
+            - Path=/comment/**
           filters:
-            - RewritePath=/shopping-cart/(?<path>.*), /$\{path}
-        - id: logbook-service
-          uri: lb://logbook-service
+            - RewritePath=/comment/(?<path>.*), /$\{path}
+        - id: review-service
+          uri: lb://review-service
           predicates:
-            - Path=/logbook/**
+            - Path=/review/**
           filters:
-            - RewritePath=/logbook/(?<path>.*), /$\{path}
-        - id: wishlist-service
-          uri: lb://wishlist-service
-          predicates:
-            - Path=/wishlist/**
-          filters:
-            - RewritePath=/wishlist/(?<path>.*), /$\{path}
+            - RewritePath=/review/(?<path>.*), /$\{path}
 
 eureka:
   client:

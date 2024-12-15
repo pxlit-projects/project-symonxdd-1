@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   post-service-db:
-    image: mysql:latest
+    image: mysql:8.0
     ports:
       - "3306:3306"
     environment:
@@ -13,7 +13,7 @@ services:
       MYSQL_TCP_PORT: 3306
 
   comment-service-db:
-    image: mysql:latest
+    image: mysql:8.0
     ports:
       - "3307:3307"
     environment:
@@ -24,7 +24,7 @@ services:
       MYSQL_TCP_PORT: 3307
 
   review-service-db:
-    image: mysql:latest
+    image: mysql:8.0
     ports:
       - "3308:3308"
     environment:

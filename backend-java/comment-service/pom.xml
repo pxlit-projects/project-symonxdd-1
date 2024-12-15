@@ -80,6 +80,12 @@
       <artifactId>mockito-core</artifactId>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>be.pxl.services</groupId>
+          <artifactId>post-service</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
 
   </dependencies>
 </project>
