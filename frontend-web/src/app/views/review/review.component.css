@@ -1,0 +1,55 @@
+.review-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.header-toolbar {
+  margin-bottom: 24px;
+  /* Adds spacing between the header and the notifications */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #fff;
+  /* color: #fff; */
+}
+
+.error-message {
+  color: #f44336;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.post-card {
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+.post-card .pending {
+  color: #ff9800;
+}
+
+.post-card .rejected {
+  color: #f44336;
+}
+
+.no-posts {
+  text-align: center;
+  color: #888;
+  margin-top: 16px;
+}
+
+.no-posts mat-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}

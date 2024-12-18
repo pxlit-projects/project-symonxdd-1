@@ -51,6 +51,7 @@ public class PostServiceImpl implements PostService {
                 .title(post.getTitle())
                 .content(post.getContent())
                 .comments(comments)
+                .author(post.getAuthor())
                 .status(post.getStatus())
                 .build();
     }
@@ -64,8 +65,13 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<PostDTO> getSubmittedPosts() {
-        return postRepository.findByStatus(PostStatus.PENDING_REVIEW).stream()
+    public List<PostDTO> getUnpublishedPosts() {
+//        return postRepository.findByStatus(PostStatus.PENDING_REVIEW).stream()
+//                .map(PostDTO::new)
+//                .collect(Collectors.toList());
+
+        return postRepository.findAll().stream()
+                .filter(post -> post.getStatus() == PostStatus.PENDING_REVIEW || post.getStatus() == PostStatus.REJECTED)
                 .map(PostDTO::new)
                 .collect(Collectors.toList());
     }

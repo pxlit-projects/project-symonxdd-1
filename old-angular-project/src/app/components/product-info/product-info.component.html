@@ -1,0 +1,14 @@
+<div class="product-info">
+  <div class="category-info">
+    <span class="info-label">Category:</span>
+    <span class="category-pill" *ngIf="categoryName; else noCategory">{{ categoryName }}</span>
+    <ng-template #noCategory><span class="no-info">No category</span></ng-template>
+  </div>
+  <div class="labels-info">
+    <span class="info-label">Labels:</span>
+    <div class="label-pills">
+      <span class="label-pill" *ngFor="let label of labelNames">{{ label }}</span>
+      <span class="no-info" *ngIf="labelNames.length === 0">No labels</span>
+    </div>
+  </div>
+</div>

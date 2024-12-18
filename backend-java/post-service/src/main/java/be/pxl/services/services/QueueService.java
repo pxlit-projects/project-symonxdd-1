@@ -34,7 +34,7 @@ public class QueueService {
 
         // Create notification
         String message = notificationDTO.getApproved()
-                ? "Post with ID " + notificationDTO.getPostId() + " has been approved. Remark: " + notificationDTO.getMessage()
+                ? "Post with ID " + notificationDTO.getPostId() + " has been approved."
                 : "Post with ID " + notificationDTO.getPostId() + " has been rejected. Remark: " + notificationDTO.getMessage();
 
         Notification notification = Notification.builder()

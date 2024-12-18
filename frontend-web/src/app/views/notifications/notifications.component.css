@@ -1,0 +1,96 @@
+/* Notifications container */
+.notifications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Header Styling */
+.header-toolbar {
+  margin-bottom: 24px;
+  /* Adds spacing between the header and the notifications */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #fff;
+  /* color: #fff; */
+}
+
+/* Notifications List Styling */
+.notification-item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* Space between notification items */
+}
+
+.notification-card {
+  width: 100%;
+  max-width: 600px;
+  /* Maintain a readable card size */
+  background-color: #f9f9f9;
+  /* Light background for better readability */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+/* Notification Card Header */
+.mat-card-header {
+  background-color: #f2f2f2;
+  /* Slightly different background for distinction */
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.mat-card-title {
+  font-size: 18px;
+  color: #333;
+  /* Dark text for readability */
+  font-weight: bold;
+}
+
+.mat-card-subtitle {
+  font-size: 14px;
+  color: #777;
+  /* Subtle text for date */
+  margin: 4px 0;
+}
+
+/* Notification Message */
+.mat-card-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #f44336;
+  /* Red color for error */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* No Notifications Styling */
+.no-notifications {
+  text-align: center;
+  color: #888;
+  margin-top: 16px;
+}
+
+.no-notifications mat-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.mat-icon {
+  color: #888;
+  /* Default icon color */
+}

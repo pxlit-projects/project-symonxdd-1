@@ -1,0 +1,49 @@
+/* Container for the entire cart */
+.product-grid {
+  /* padding-top: 24px; */
+  margin-top: 40px;
+}
+
+/* Padding for each cart item to ensure the button is visible */
+mat-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 24px;
+  /* Increase padding to ensure button visibility */
+  height: 174px !important;
+}
+
+/* Adjust margin for the 'Remove' button */
+button {
+  flex-shrink: 0;
+  margin-top: 8px;
+  /* Add margin to separate the button from the item details */
+}
+
+/* Product details within each list item */
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .mat-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item-details {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  button {
+    align-self: stretch;
+  }
+}

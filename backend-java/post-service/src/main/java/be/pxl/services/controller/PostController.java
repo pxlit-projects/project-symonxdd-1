@@ -35,9 +35,9 @@ public class PostController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/pending-review")
-    public ResponseEntity<List<PostDTO>> getSubmittedPosts() {
-        return ResponseEntity.ok(postService.getSubmittedPosts());
+    @GetMapping("/unpublished")
+    public ResponseEntity<List<PostDTO>> getUnpublishedPosts() {
+        return ResponseEntity.ok(postService.getUnpublishedPosts());
     }
 
     @GetMapping

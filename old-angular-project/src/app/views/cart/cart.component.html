@@ -1,0 +1,29 @@
+<div class="product-grid">
+  <div *ngIf="cartItems.length > 0; else noItems">
+    <mat-card class="cart-card">
+      <mat-card-header>
+        <mat-card-title>Shopping Cart</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+
+        <mat-list>
+          <mat-list-item *ngFor="let item of cartItems">
+            <div mat-line>
+              <strong>{{ item.productName }}</strong>
+            </div>
+            <div mat-line>Price: {{ item.productPrice | currency: 'EUR' }}</div>
+            <div mat-line>Quantity: {{ item.quantity }}</div>
+            <button mat-raised-button color="warn" (click)="removeItem(item.productId)">Remove</button>
+          </mat-list-item>
+        </mat-list>
+        <button mat-raised-button color="primary" (click)="placeOrder()">Place Order</button>
+      </mat-card-content>
+
+
+    </mat-card>
+  </div>
+  <ng-template #noItems>
+    <p>No items in the cart.</p>
+  </ng-template>
+</div>

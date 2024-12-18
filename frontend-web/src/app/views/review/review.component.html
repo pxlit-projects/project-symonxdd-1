@@ -1,0 +1,66 @@
+<div class="review-container">
+  <!-- Header -->
+  <mat-toolbar color="primary" class="header-toolbar">
+    <span>Review Posts</span>
+  </mat-toolbar>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message">
+    <mat-icon>error</mat-icon>
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <!-- Post List -->
+  <div *ngIf="unpublishedPosts.length > 0">
+    <div *ngFor="let post of unpublishedPosts" class="post-card">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ post.title }}</mat-card-title>
+          <mat-card-subtitle>By: {{ post.author }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ post.content }}</p>
+          <p>
+            Status:
+            <strong><span [class.pending]="post.status === 'PENDING_REVIEW'"
+                [class.rejected]="post.status === 'REJECTED'">
+                {{ post.status }}
+              </span></strong>
+          </p>
+        </mat-card-content>
+        <mat-card-actions *ngIf="post.id">
+          <!-- For Rejected Posts -->
+          <form *ngIf="post.status === 'REJECTED'" #rejectedForm="ngForm" (ngSubmit)="approvePost(post.id)">
+            <button mat-raised-button color="primary" type="submit">Approve</button>
+          </form>
+
+          <!-- For Pending Review Posts -->
+          <form *ngIf="post.status === 'PENDING_REVIEW'" #pendingForm="ngForm">
+            <div class="action-buttons">
+              <button mat-raised-button color="primary" (click)="approvePost(post.id)">Approve</button>
+              <button mat-raised-button color="warn" type="button"
+                (click)="rejectPost(post.id!, comments[post.id!], pendingForm)">
+                Reject
+              </button>
+            </div>
+            <mat-form-field appearance="outline">
+              <mat-label>Comment</mat-label>
+              <input matInput name="comment" placeholder="Comment" [(ngModel)]="comments[post.id!]"
+                #commentInput="ngModel" required />
+              <mat-error *ngIf="commentInput.invalid && commentInput.touched">
+                You forgot to write a comment...
+              </mat-error>
+            </mat-form-field>
+          </form>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+
+  <!-- No Posts -->
+  <div *ngIf="unpublishedPosts.length === 0" class="no-posts">
+    <mat-icon>inbox</mat-icon>
+    <p>No posts to review.</p>
+  </div>
+</div>

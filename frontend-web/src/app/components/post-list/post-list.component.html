@@ -1,0 +1,25 @@
+<div class="post-container">
+  <!-- Header Section -->
+  <mat-toolbar color="primary" class="header-toolbar">
+    <span class="header-text">Published Posts</span>
+  </mat-toolbar>
+
+  <!-- Posts Section -->
+  <mat-grid-list cols="3" gutterSize="24" class="grid-container">
+    <mat-grid-tile *ngFor="let post of posts" class="post-tile">
+      <mat-card class="clickable-card" (click)="navigateToDetails(post.id)">
+        <mat-card-header>
+          <mat-card-title>{{ post.title }}</mat-card-title>
+          <mat-card-subtitle>By {{ post.author }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <p>{{ post.content }}</p>
+        </mat-card-content>
+        <mat-card-footer>
+          <span class="status" [ngClass]="post.status.toLowerCase()">{{ post.status }}</span>
+        </mat-card-footer>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

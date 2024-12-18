@@ -1,6 +1,5 @@
 package be.pxl.services.services;
 
-import be.pxl.services.domain.Post;
 import be.pxl.services.domain.dto.CreatePostRequest;
 import be.pxl.services.domain.dto.PostDTO;
 import be.pxl.services.domain.dto.UpdatePostRequest;
@@ -11,7 +10,7 @@ public interface PostService {
     PostDTO createPost(CreatePostRequest createPostRequest);
     PostDTO getPostById(Long id);
     PostDTO updatePost(Long id, UpdatePostRequest request);
-    List<PostDTO> getSubmittedPosts();
+    List<PostDTO> getUnpublishedPosts();
     List<PostDTO> getPublishedPosts();
     List<PostDTO> filterPosts(String category, String author);
 }

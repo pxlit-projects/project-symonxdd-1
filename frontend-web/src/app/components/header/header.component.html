@@ -1,0 +1,26 @@
+<header>
+  <nav>
+    <div class="header-left">
+      <a href="https://www.youtube.com/watch?v=MW2r0fwDfMI" target="_blank" rel="noopener noreferrer">
+        <img class="logo" src="assets/angular-logo-text.png" alt="Logo" />
+      </a>
+    </div>
+    <div class="header-center">
+      <h1>Internal News App</h1>
+    </div>
+    <div class="header-right">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+
+      <ng-container *ngIf="currentRole === 'admin'">
+        <a routerLink="/notifications" routerLinkActive="active">Notifications</a>
+        <a routerLink="/review" routerLinkActive="active">Review</a>
+        <a routerLink="/admin" routerLinkActive="active">Admin Dashboard</a>
+      </ng-container>
+    </div>
+  </nav>
+</header>
+
+<!--
+- routerLinkActive="active": Applies the active class to the link when it is active.
+- [routerLinkActiveOptions]="{ exact: true }": Ensures that the active class is only applied when the route matches exactly. This is useful for the root route (/) to prevent it from being highlighted when navigating to subroutes.
+-->

@@ -1,0 +1,58 @@
+nav {
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 80px;
+  box-shadow: 0 4px 6px rgba(189, 189, 189, 0.1);
+  position: relative;
+}
+
+.header-left {
+  flex: 0 0 auto;
+}
+
+.header-left .logo {
+  height: 40px;
+  /* Adjust height as needed to fit within header */
+  width: auto;
+  /* Maintain aspect ratio */
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-center h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 0 0 auto;
+}
+
+.header-right a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-right a.active {
+  background-color: #8106F9;
+  color: white;
+}

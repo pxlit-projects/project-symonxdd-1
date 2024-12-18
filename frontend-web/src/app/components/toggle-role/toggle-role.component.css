@@ -1,0 +1,10 @@
+button {
+  position: fixed;
+  /* Fixes the button in the viewport */
+  bottom: 20px;
+  /* Margin from the bottom of the viewport */
+  left: 20px;
+  /* Margin from the left of the viewport */
+  z-index: 1000;
+  /* Ensures it stays above other elements */
+}

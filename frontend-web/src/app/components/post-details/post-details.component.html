@@ -1,0 +1,21 @@
+<div *ngIf="isLoading" class="loading-container">
+  <mat-spinner></mat-spinner> <!-- Angular Material spinner for loading -->
+</div>
+
+<div *ngIf="errorMessage" class="error-message">
+  <mat-icon>error</mat-icon>
+  <p>{{ errorMessage }}</p>
+</div>
+
+<div *ngIf="post" class="post-details-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ post.title }}</mat-card-title>
+      <mat-card-subtitle>By {{ post.author }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <p>{{ post.content }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

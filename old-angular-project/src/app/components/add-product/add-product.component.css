@@ -1,0 +1,22 @@
+.product-card {
+  width: 400px; /* Set a fixed width for the container */
+  margin: 0 auto; /* Center the container */
+}
+
+mat-card-title {
+  margin-bottom: 20px; /* Add spacing below the title */
+}
+
+mat-card-content {
+  padding: 0 16px; /* Optional: Adjust padding if needed */
+}
+
+mat-form-field {
+  width: 100%; /* Make form fields take up the full width */
+  margin-bottom: 15px;
+}
+
+button[type="submit"] {
+  display: block;
+  margin-top: 20px;
+}

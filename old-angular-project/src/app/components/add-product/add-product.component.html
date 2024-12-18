@@ -1,0 +1,40 @@
+<mat-card class="product-card">
+  <mat-card-header>
+    <mat-card-title>Add New Product</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (ngSubmit)="onSubmitAdd()">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="newProduct.name" name="name" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input matInput [(ngModel)]="newProduct.description" name="description" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input matInput type="number" [(ngModel)]="newProduct.price" name="price" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Stock</mat-label>
+        <input matInput type="number" [(ngModel)]="newProduct.stock" name="stock" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <input matInput [(ngModel)]="newProduct.categoryName" name="category" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Labels (comma-separated)</mat-label>
+        <input matInput [(ngModel)]="labelsInput" name="labelNames" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Create Product</button>
+    </form>
+  </mat-card-content>
+</mat-card>

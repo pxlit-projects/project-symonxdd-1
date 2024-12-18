@@ -1,0 +1,48 @@
+.post-details-container {
+  max-width: 800px;
+  margin: 20px auto;
+  /* Center the card horizontally */
+  padding: 16px;
+}
+
+mat-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+mat-card-header {
+  background-color: #f5f5f5;
+  padding: 16px;
+}
+
+mat-card-footer {
+  display: flex;
+  justify-content: flex-start;
+  padding: 16px;
+}
+
+button {
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+/* Loading spinner styles */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.error-message mat-icon {
+  margin-right: 8px;
+}
