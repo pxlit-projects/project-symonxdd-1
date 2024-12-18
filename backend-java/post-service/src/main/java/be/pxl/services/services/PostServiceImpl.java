@@ -51,6 +51,7 @@ public class PostServiceImpl implements PostService {
                 .title(post.getTitle())
                 .content(post.getContent())
                 .comments(comments)
+                .createdAt(post.getCreatedAt())
                 .author(post.getAuthor())
                 .status(post.getStatus())
                 .build();

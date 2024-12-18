@@ -95,3 +95,13 @@ mat-card-footer {
   /* Slight zoom on hover */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+.filter-section {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.filter-input {
+  flex: 1;
+}

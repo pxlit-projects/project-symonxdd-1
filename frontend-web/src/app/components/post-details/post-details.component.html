@@ -18,4 +18,41 @@
       <p>{{ post.content }}</p>
     </mat-card-content>
   </mat-card>
+
+  <!-- Add New Comment Form -->
+  <div class="new-comment-form">
+    <h3 mat-subheader>Add a Comment</h3>
+    <mat-divider></mat-divider>
+    <form #commentForm="ngForm" (ngSubmit)="onSubmit(commentForm)" class="comment-form">
+      <mat-form-field appearance="fill">
+        <mat-label>Author</mat-label>
+        <input matInput [value]="currentRole" readonly />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Content</mat-label>
+        <textarea matInput required [(ngModel)]="newComment.content" name="content" #content="ngModel"></textarea>
+        <mat-error *ngIf="content.invalid && content.touched">Content is required!</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="commentForm.invalid">Post Comment</button>
+    </form>
+  </div>
+
+  <!-- Display comments section -->
+  <div *ngIf="post.comments?.length" class="comments-container">
+    <h3 mat-subheader>Comments</h3>
+    <mat-divider></mat-divider>
+
+    <div *ngFor="let comment of post.comments" class="comment-card">
+      <mat-card class="comment-card-content">
+        <mat-card-header>
+          <mat-card-title>{{ comment.author }}</mat-card-title>
+          <mat-card-subtitle>{{ comment.createdAt | date: 'dd MMM HH:mm' }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ comment.content }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>

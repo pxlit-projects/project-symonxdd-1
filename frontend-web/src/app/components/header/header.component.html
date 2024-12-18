@@ -9,12 +9,12 @@
       <h1>Internal News App</h1>
     </div>
     <div class="header-right">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Posts</a>
 
-      <ng-container *ngIf="currentRole === 'admin'">
+      <ng-container *ngIf="currentRole === 'editor'">
         <a routerLink="/notifications" routerLinkActive="active">Notifications</a>
         <a routerLink="/review" routerLinkActive="active">Review</a>
-        <a routerLink="/admin" routerLinkActive="active">Admin Dashboard</a>
+        <a routerLink="/editor" routerLinkActive="active">Editor Dashboard</a>
       </ng-container>
     </div>
   </nav>

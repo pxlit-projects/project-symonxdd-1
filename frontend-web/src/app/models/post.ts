@@ -6,6 +6,6 @@ export interface Post {
   content: string;
   author: string;
   status: string;
-
+  date: string;
   comments?: Comment[];
 }

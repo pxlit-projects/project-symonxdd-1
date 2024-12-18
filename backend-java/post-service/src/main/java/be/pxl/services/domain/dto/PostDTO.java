@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Builder;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -19,6 +20,7 @@ public class PostDTO {
     private String content;
     private String author;
     private PostStatus status;
+    private LocalDateTime createdAt;
     private List<CommentDTO> comments;
 
     public PostDTO(Post post) {
@@ -27,6 +29,7 @@ public class PostDTO {
         this.content = post.getContent();
         this.author = post.getAuthor();
         this.status = post.getStatus();
+        this.createdAt = post.getCreatedAt();
     }
 }
 

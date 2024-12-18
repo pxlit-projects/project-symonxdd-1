@@ -12,5 +12,5 @@ export const routes: Routes = [
   { path: 'post/:id', component: PostDetailsComponent },
   { path: 'review', component: ReviewComponent, canActivate: [AdminGuard] }, // Protected route
   { path: 'notifications', component: NotificationsComponent, canActivate: [AdminGuard] }, // Protected route
-  { path: 'admin', component: AdminDashboardComponent, canActivate: [AdminGuard] }, // Protected route
+  { path: 'editor', component: AdminDashboardComponent, canActivate: [AdminGuard] }, // Protected route
 ];

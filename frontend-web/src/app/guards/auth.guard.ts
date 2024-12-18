@@ -10,7 +10,7 @@ export class AdminGuard implements CanActivate {
   constructor(private roleService: RoleService, private router: Router) { }
 
   canActivate(): boolean {
-    if (this.roleService.isAdmin()) {
+    if (this.roleService.isEditor()) {
       return true;
     } else {
       this.router.navigate(['/']);

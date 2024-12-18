@@ -24,8 +24,8 @@ export class RoleService {
     return this.roleSubject.getValue();
   }
 
-  isAdmin(): boolean {
-    return this.getRole() === 'admin';
+  isEditor(): boolean {
+    return this.getRole() === 'editor';
   }
 
   getHeaders() {

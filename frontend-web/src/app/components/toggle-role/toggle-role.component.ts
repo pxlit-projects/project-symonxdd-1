@@ -22,11 +22,14 @@ export class ToggleRoleComponent implements OnInit {
   }
 
   toggleRole() {
-    const newRole = this.currentRole === 'user' ? 'admin' : 'user';
+    const newRole = this.currentRole === 'user' ? 'editor' : 'user';
     this.roleService.setRole(newRole);
 
-    // Redirect to home if switching from admin to user while on /admin route
-    if (newRole === 'user' && this.router.url === '/admin') {
+    // Redirect to home if switching from editor to user while on /editor route
+    // if (newRole === 'user' && this.router.url === '/') {
+    //   this.router.navigate(['/']);
+    // }
+    if (newRole === 'user' && this.router.url !== '/') {
       this.router.navigate(['/']);
     }
   }
