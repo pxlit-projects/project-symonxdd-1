@@ -7,7 +7,6 @@
 
 /* Header Styling */
 .header-toolbar {
-  /* Adds spacing between the header and the grid */
   display: flex;
   justify-content: left;
   align-items: center;
@@ -15,50 +14,92 @@
   font-weight: 500;
   background-color: #FFFFFF;
   color: #333333;
+  margin-bottom: 20px;
 }
 
 /* Grid and Cards */
 .grid-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 24px;
 }
 
 .post-tile {
   flex: 1 1 calc(33.333% - 24px);
-  /* Each tile takes 1/3 of the width */
   box-sizing: border-box;
   margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 
+/* Make sure mat-grid-tile-content doesn't impose any unnecessary height */
+mat-grid-tile-content {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+/* Card Styling */
 mat-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #212121;
+  /* Dark grey background */
+  color: #e0e0e0;
+  /* Lighter grey text */
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  max-height: 450px;
+  /* Max height for the cards */
+  overflow: hidden;
 }
 
+/* Card hover effect */
+mat-card:hover {
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  /* Bring hovered card to the top */
+}
+
+/* Header Styling */
 mat-card-header {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-mat-divider {
-  margin: 8px 0;
+mat-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #e0e0e0;
+  /* Lighter grey text */
 }
 
+mat-card-subtitle {
+  font-size: 1rem;
+  color: #bdbdbd;
+  /* Lighter subtitle */
+}
+
+/* Footer Styling */
 mat-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 20px;
+  color: #bdbdbd;
+  /* Light grey for footer text */
 }
 
 /* Status Colors */
 .status {
   font-weight: bold;
   text-transform: capitalize;
-  /* Ensures first letter is capitalized */
 }
 
 .status.approved {
@@ -76,11 +117,18 @@ mat-card-footer {
   /* Orange for pending */
 }
 
+/* Created At Date Styling */
+.created-at {
+  font-size: 0.875rem;
+  color: #bdbdbd;
+  /* Light grey for created-at */
+}
+
 /* Responsive layout adjustments */
 @media (max-width: 768px) {
   .post-tile {
     flex: 1 1 100%;
-    /* Stack items on smaller screens */
+    /* Stack posts on smaller screens */
   }
 }
 
@@ -92,7 +140,6 @@ mat-card-footer {
 
 .clickable-card:hover {
   transform: scale(1.02);
-  /* Slight zoom on hover */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -104,4 +151,9 @@ mat-card-footer {
 
 .filter-input {
   flex: 1;
+}
+
+.create-post-btn {
+  margin-left: auto;
+  margin-right: 20px;
 }

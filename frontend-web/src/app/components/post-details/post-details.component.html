@@ -13,7 +13,6 @@
       <mat-card-title>{{ post.title }}</mat-card-title>
       <mat-card-subtitle>By {{ post.author }}</mat-card-subtitle>
     </mat-card-header>
-    <mat-divider></mat-divider>
     <mat-card-content>
       <p>{{ post.content }}</p>
     </mat-card-content>
@@ -22,14 +21,13 @@
   <!-- Add New Comment Form -->
   <div class="new-comment-form">
     <h3 mat-subheader>Add a Comment</h3>
-    <mat-divider></mat-divider>
     <form #commentForm="ngForm" (ngSubmit)="onSubmit(commentForm)" class="comment-form">
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Author</mat-label>
         <input matInput [value]="currentRole" readonly />
       </mat-form-field>
 
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Content</mat-label>
         <textarea matInput required [(ngModel)]="newComment.content" name="content" #content="ngModel"></textarea>
         <mat-error *ngIf="content.invalid && content.touched">Content is required!</mat-error>
@@ -41,7 +39,6 @@
   <!-- Display comments section -->
   <div *ngIf="post.comments?.length" class="comments-container">
     <h3 mat-subheader>Comments</h3>
-    <mat-divider></mat-divider>
 
     <div *ngFor="let comment of post.comments" class="comment-card">
       <mat-card class="comment-card-content">

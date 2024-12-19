@@ -1,0 +1,30 @@
+<div class="new-post-container">
+  <!-- Header Section -->
+  <mat-toolbar color="primary" class="header-toolbar">
+    <span class="header-text">Create New Post</span>
+  </mat-toolbar>
+
+  <!-- Form Section -->
+  <form [formGroup]="postForm" (ngSubmit)="createPost()">
+    <div class="form-section">
+      <mat-form-field appearance="outline" class="form-input">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" placeholder="Post Title" required />
+        <mat-error *ngIf="postForm.get('title')?.hasError('required')">Title is required.</mat-error>
+        <mat-error *ngIf="postForm.get('title')?.hasError('maxlength')">Title can't be longer than 100
+          characters.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-input">
+        <mat-label>Content</mat-label>
+        <textarea matInput formControlName="content" placeholder="Post Content" required></textarea>
+        <mat-error *ngIf="postForm.get('content')?.hasError('required')">Content is required.</mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-actions">
+      <button mat-raised-button color="primary" type="submit" [disabled]="postForm.invalid">Create Post</button>
+    </div>
+  </form>
+</div>

@@ -38,7 +38,7 @@ export class PostListComponent implements OnInit {
   filteredPosts: Post[] = [];
   authorFilter: string = '';
   contentFilter: string = '';
-  dateFilter: string = ''; // Filter for date
+  dateFilter: Date | null = null; // Use Date object here
   currentDate: string = new Date().toISOString().split('T')[0]; // Format as YYYY-MM-DD for date picker
 
   constructor(private postService: PostService, private router: Router) { }
@@ -47,15 +47,28 @@ export class PostListComponent implements OnInit {
     this.router.navigate(['/post', postId]);
   }
 
+  navigateToCreatePost(): void {
+    this.router.navigate(['/post/create']);
+  }
+
   // Filter function
   filterPosts(): void {
     this.filteredPosts = this.posts.filter(post => {
+      const postDate = new Date(post.createdAt!); // Convert string to Date object
+
       return (
         (this.authorFilter ? post.author.toLowerCase().includes(this.authorFilter.toLowerCase()) : true) &&
         (this.contentFilter ? post.content.toLowerCase().includes(this.contentFilter.toLowerCase()) : true) &&
-        (this.dateFilter ? post.date.includes(this.dateFilter) : true)
+        (this.dateFilter ? this.isSameDate(postDate, this.dateFilter) : true) // Compare dates only
       );
     });
+  }
+
+  // Compare two dates without considering time
+  isSameDate(date1: Date, date2: Date): boolean {
+    return date1.getFullYear() === date2.getFullYear() &&
+      date1.getMonth() === date2.getMonth() &&
+      date1.getDate() === date2.getDate();
   }
 
   ngOnInit(): void {

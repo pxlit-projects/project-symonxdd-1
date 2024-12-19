@@ -1,0 +1,58 @@
+/* Container Styling */
+.new-post-container {
+  max-width: 1200px;
+  /* Same width as the notifications container */
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Header Styling */
+.header-toolbar {
+  margin-bottom: 24px;
+  /* Adds spacing between the header and the form */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #fff;
+  color: #333;
+  /* Dark color for text */
+}
+
+/* Form Section Styling */
+.form-section {
+  margin-bottom: 16px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+/* Form Field Styling */
+.form-input {
+  width: 100%;
+  margin-bottom: 16px;
+  /* Space between form fields */
+}
+
+/* Submit Button Styling */
+.form-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* Error Messages */
+mat-error {
+  font-size: 12px;
+  color: #f44336;
+  /* Red for error messages */
+}
+
+/* Additional Styling for mat-form-field */
+mat-form-field {
+  width: 100%;
+}
+
+/* Button Styling */
+button {
+  min-width: 150px;
+}

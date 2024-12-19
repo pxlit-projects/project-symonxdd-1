@@ -2,21 +2,23 @@
   <!-- Header Section -->
   <mat-toolbar color="primary" class="header-toolbar">
     <span class="header-text">Published Posts</span>
+    <button mat-raised-button color="accent" class="create-post-btn" (click)="navigateToCreatePost()">Create New
+      Post</button>
   </mat-toolbar>
 
   <!-- Filter Section -->
   <div class="filter-section">
-    <mat-form-field appearance="fill" class="filter-input">
+    <mat-form-field appearance="outline" class="filter-input">
       <mat-label>Filter by Author</mat-label>
       <input matInput [(ngModel)]="authorFilter" (input)="filterPosts()">
     </mat-form-field>
 
-    <mat-form-field appearance="fill" class="filter-input">
+    <mat-form-field appearance="outline" class="filter-input">
       <mat-label>Filter by Content</mat-label>
       <input matInput [(ngModel)]="contentFilter" (input)="filterPosts()">
     </mat-form-field>
 
-    <mat-form-field appearance="fill" class="filter-input">
+    <mat-form-field appearance="outline" class="filter-input">
       <mat-label>Filter by Date</mat-label>
       <input matInput [matDatepicker]="picker" [(ngModel)]="dateFilter" (dateChange)="filterPosts()">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -25,19 +27,19 @@
   </div>
 
   <!-- Posts Section -->
-  <mat-grid-list cols="3" gutterSize="24" class="grid-container">
+  <mat-grid-list cols="3" gutterSize="10" class="grid-container">
     <mat-grid-tile *ngFor="let post of filteredPosts" class="post-tile">
       <mat-card class="clickable-card" (click)="navigateToDetails(post.id!)">
         <mat-card-header>
           <mat-card-title>{{ post.title }}</mat-card-title>
           <mat-card-subtitle>By {{ post.author }}</mat-card-subtitle>
         </mat-card-header>
-        <mat-divider></mat-divider>
         <mat-card-content>
           <p>{{ post.content }}</p>
         </mat-card-content>
         <mat-card-footer>
-          <span class="status" [ngClass]="post.status.toLowerCase()">{{ post.status }}</span>
+          <span class="status" [ngClass]="post.status?.toLowerCase()">{{ post.status }}</span>
+          <span class="created-at">{{ post.createdAt | date: 'dd MMM HH:mm' }}</span>
         </mat-card-footer>
       </mat-card>
     </mat-grid-tile>

@@ -32,6 +32,12 @@ export class PostService {
     );
   }
 
+  createPost(newPost: Post): Observable<Post> {
+    return this.http.post<Post>(this.endpoint, newPost).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(error: HttpErrorResponse): Observable<never> {
     // Log the error to the console (or send it to a logging infrastructure)
     console.error('An error occurred:', error.message);
