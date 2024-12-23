@@ -1,10 +1,31 @@
-button {
+.role-selector-container {
   position: fixed;
-  /* Fixes the button in the viewport */
-  bottom: 20px;
-  /* Margin from the bottom of the viewport */
-  left: 20px;
-  /* Margin from the left of the viewport */
+  bottom: -5px;
+  /* Distance from the bottom edge */
+  left: 15px;
+  /* Distance from the left edge */
   z-index: 1000;
-  /* Ensures it stays above other elements */
+  /* Ensure it stays on top */
+  width: 135px;
+  /* Set the container width */
+}
+
+/* Optional: Adjust the mat-form-field styling */
+.dropdown-field {
+  width: 100%;
+  /* Ensure the dropdown fits within the container width */
+}
+
+.mat-form-field {
+  background-color: #ffffff;
+  /* Optional: Add a white background */
+  border-radius: 4px;
+  /* Optional: Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Optional: Add shadow for better visibility */
+}
+
+.mat-select {
+  width: 100%;
+  /* Ensure the mat-select respects the container width */
 }

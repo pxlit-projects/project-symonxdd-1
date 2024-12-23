@@ -1,0 +1,32 @@
+<div class="post-container">
+  <!-- Header Section -->
+  <mat-toolbar color="primary" class="header-toolbar">
+    <span class="header-text">Drafts</span>
+
+    @if (currentRole === 'editor') {
+    <button mat-raised-button color="accent" class="create-post-btn" (click)="navigateToCreatePost()">Create New
+      Post
+    </button>
+    }
+
+  </mat-toolbar>
+
+  <!-- Posts Section -->
+  <div class="posts-list">
+    @for (post of posts; track post.id) {
+    <div class="post-card" (click)="navigateToPostEditor(post.id!)">
+      <div class="post-card-header">
+        <div class="post-card-title">{{ post.title }}</div>
+        <div class="post-card-subtitle">By {{ post.author }}</div>
+      </div>
+      <div class="post-card-content">
+        <p>{{ post.content }}</p>
+      </div>
+      <div class="post-card-footer">
+        <span class="status" [ngClass]="post.status?.toLowerCase()">{{ post.status }}</span>
+        <span class="created-at">{{ post.createdAt | date: 'dd MMM HH:mm' }}</span>
+      </div>
+    </div>
+    }
+  </div>
+</div>

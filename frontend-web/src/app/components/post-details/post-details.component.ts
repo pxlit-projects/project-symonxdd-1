@@ -1,5 +1,5 @@
 import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PostService } from '../../services/post/post.service';
 import { CommentService } from '../../services/comment/comment.service'; // Import CommentService
 import { Post } from '../../models/post';
@@ -16,6 +16,8 @@ import { FormsModule, NgForm } from '@angular/forms';  // Import NgForm
 import { Comment } from '../../models/comment';  // Import Comment
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { CommentItemComponent } from "../comment-item/comment-item.component";
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-post-details',
@@ -30,14 +32,16 @@ import { MatInputModule } from '@angular/material/input';
     RouterModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    CommentItemComponent,
+    MatToolbarModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'nl-BE' }],
   templateUrl: './post-details.component.html',
   styleUrls: ['./post-details.component.css'],
 })
 export class PostDetailsComponent implements OnInit {
-  post: Post | null = null;
+  post!: Post;
   isLoading = true;
   errorMessage: string | null = null;
   newComment: Comment = { content: '', createdAt: '', author: '', postId: 0 };  // Initialize postId to 0 initially
@@ -47,7 +51,8 @@ export class PostDetailsComponent implements OnInit {
     private postService: PostService,
     private commentService: CommentService, // Inject CommentService
     private roleService: RoleService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -98,5 +103,9 @@ export class PostDetailsComponent implements OnInit {
           this.errorMessage = 'Error posting comment!';
         }
       });
+  }
+
+  navigateToPostEditor(postId: number): void {
+    this.router.navigate(['/post/edit', postId]);
   }
 }

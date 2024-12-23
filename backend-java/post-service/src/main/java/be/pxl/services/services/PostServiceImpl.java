@@ -3,10 +3,7 @@ package be.pxl.services.services;
 import be.pxl.services.client.CommentServiceClient;
 import be.pxl.services.domain.Post;
 import be.pxl.services.domain.PostStatus;
-import be.pxl.services.domain.dto.CommentDTO;
-import be.pxl.services.domain.dto.CreatePostRequest;
-import be.pxl.services.domain.dto.PostDTO;
-import be.pxl.services.domain.dto.UpdatePostRequest;
+import be.pxl.services.domain.dto.*;
 import be.pxl.services.exception.ResourceNotFoundException;
 import be.pxl.services.repo.PostRepository;
 import jakarta.persistence.EntityNotFoundException;
@@ -27,10 +24,21 @@ public class PostServiceImpl implements PostService {
     @Override
     public PostDTO createPost(CreatePostRequest request) {
         Post post = request.toEntity();
-        post.setStatus(PostStatus.PENDING_REVIEW);
+        post.setStatus(PostStatus.DRAFT);
         post.setCreatedAt(LocalDateTime.now());
         post.setUpdatedAt(LocalDateTime.now());
         return new PostDTO(postRepository.save(post));
+    }
+
+    @Override
+    public void submitPostForReview(SubmitForReviewRequest submitForReviewRequest) {
+        Optional<Post> postOptional = postRepository.findById(submitForReviewRequest.getPostId());
+        if (postOptional.isEmpty()) {
+            throw new ResourceNotFoundException("Post not found with id: " + submitForReviewRequest.getPostId());
+        }
+        Post post = postOptional.get();
+        post.setStatus(PostStatus.PENDING_REVIEW);
+        postRepository.save(post);
     }
 
     @Override
@@ -67,12 +75,15 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<PostDTO> getUnpublishedPosts() {
-//        return postRepository.findByStatus(PostStatus.PENDING_REVIEW).stream()
-//                .map(PostDTO::new)
-//                .collect(Collectors.toList());
-
         return postRepository.findAll().stream()
                 .filter(post -> post.getStatus() == PostStatus.PENDING_REVIEW || post.getStatus() == PostStatus.REJECTED)
+                .map(PostDTO::new)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<PostDTO> getDraftPosts() {
+        return postRepository.findByStatus(PostStatus.DRAFT).stream()
                 .map(PostDTO::new)
                 .collect(Collectors.toList());
     }
@@ -82,11 +93,6 @@ public class PostServiceImpl implements PostService {
         return postRepository.findByStatus(PostStatus.APPROVED).stream()
                 .map(PostDTO::new)
                 .collect(Collectors.toList());
-    }
-
-    @Override
-    public List<PostDTO> filterPosts(String category, String author) {
-        return null; // TODO
     }
 }
 

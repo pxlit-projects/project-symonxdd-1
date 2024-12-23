@@ -2,8 +2,11 @@
   <!-- Header Section -->
   <mat-toolbar color="primary" class="header-toolbar">
     <span class="header-text">Published Posts</span>
-    <button mat-raised-button color="accent" class="create-post-btn" (click)="navigateToCreatePost()">Create New
-      Post</button>
+
+    <ng-container *ngIf="currentRole === 'editor'">
+      <button mat-raised-button color="accent" class="create-post-btn" (click)="navigateToCreatePost()">Create New
+        Post</button>
+    </ng-container>
   </mat-toolbar>
 
   <!-- Filter Section -->
@@ -27,21 +30,21 @@
   </div>
 
   <!-- Posts Section -->
-  <mat-grid-list cols="3" gutterSize="10" class="grid-container">
-    <mat-grid-tile *ngFor="let post of filteredPosts" class="post-tile">
-      <mat-card class="clickable-card" (click)="navigateToDetails(post.id!)">
-        <mat-card-header>
-          <mat-card-title>{{ post.title }}</mat-card-title>
-          <mat-card-subtitle>By {{ post.author }}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <p>{{ post.content }}</p>
-        </mat-card-content>
-        <mat-card-footer>
-          <span class="status" [ngClass]="post.status?.toLowerCase()">{{ post.status }}</span>
-          <span class="created-at">{{ post.createdAt | date: 'dd MMM HH:mm' }}</span>
-        </mat-card-footer>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div class="posts-list">
+    @for (post of filteredPosts; track post.id) {
+    <div class="post-card" (click)="navigateToDetails(post.id!)">
+      <div class="post-card-header">
+        <div class="post-card-title">{{ post.title }}</div>
+        <div class="post-card-subtitle">By {{ post.author }}</div>
+      </div>
+      <div class="post-card-content">
+        <p>{{ post.content }}</p>
+      </div>
+      <div class="post-card-footer">
+        <span class="status" [ngClass]="post.status?.toLowerCase()">{{ post.status }}</span>
+        <span class="created-at">{{ post.createdAt | date: 'dd MMM HH:mm' }}</span>
+      </div>
+    </div>
+    }
+  </div>
 </div>

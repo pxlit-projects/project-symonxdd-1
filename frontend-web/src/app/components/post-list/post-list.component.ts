@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { RoleService } from '../../services/role/role.service';
 
 @Component({
   selector: 'app-post-list',
@@ -34,6 +35,8 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class PostListComponent implements OnInit {
 
+  currentRole: string = 'user';
+
   posts: Post[] = [];
   filteredPosts: Post[] = [];
   authorFilter: string = '';
@@ -41,7 +44,10 @@ export class PostListComponent implements OnInit {
   dateFilter: Date | null = null; // Use Date object here
   currentDate: string = new Date().toISOString().split('T')[0]; // Format as YYYY-MM-DD for date picker
 
-  constructor(private postService: PostService, private router: Router) { }
+  constructor(
+    private postService: PostService,
+    private router: Router,
+    private roleService: RoleService) { }
 
   navigateToDetails(postId: number): void {
     this.router.navigate(['/post', postId]);
@@ -77,6 +83,8 @@ export class PostListComponent implements OnInit {
       this.filteredPosts = data; // Initialize filtered posts with all posts
       console.log(this.posts);
     });
+
+    this.roleService.role$.subscribe(role => this.currentRole = role);
   }
 }
 

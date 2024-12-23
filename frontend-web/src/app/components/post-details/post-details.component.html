@@ -2,54 +2,61 @@
   <mat-spinner></mat-spinner> <!-- Angular Material spinner for loading -->
 </div>
 
-<div *ngIf="errorMessage" class="error-message">
-  <mat-icon>error</mat-icon>
-  <p>{{ errorMessage }}</p>
-</div>
+<!-- Post Details Section -->
+<div class="post-details-container">
+  <mat-toolbar color="primary" class="header-toolbar">
+    <span class="header-text">Post Details</span>
 
-<div *ngIf="post" class="post-details-container">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{ post.title }}</mat-card-title>
-      <mat-card-subtitle>By {{ post.author }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{ post.content }}</p>
-    </mat-card-content>
-  </mat-card>
+    @if (currentRole === 'editor') {
+    <button mat-raised-button color="accent" class="edit-post-btn" (click)="navigateToPostEditor(post.id!)">
+      Edit Post
+    </button>
+    }
+  </mat-toolbar>
 
-  <!-- Add New Comment Form -->
-  <div class="new-comment-form">
-    <h3 mat-subheader>Add a Comment</h3>
-    <form #commentForm="ngForm" (ngSubmit)="onSubmit(commentForm)" class="comment-form">
-      <mat-form-field appearance="outline">
-        <mat-label>Author</mat-label>
-        <input matInput [value]="currentRole" readonly />
-      </mat-form-field>
-
-      <mat-form-field appearance="outline">
-        <mat-label>Content</mat-label>
-        <textarea matInput required [(ngModel)]="newComment.content" name="content" #content="ngModel"></textarea>
-        <mat-error *ngIf="content.invalid && content.touched">Content is required!</mat-error>
-      </mat-form-field>
-      <button mat-raised-button color="primary" type="submit" [disabled]="commentForm.invalid">Post Comment</button>
-    </form>
+  <!-- Error Message Section -->
+  <div *ngIf="errorMessage" class="error-message">
+    <mat-icon>error</mat-icon>
+    <p>{{ errorMessage }}</p>
   </div>
 
-  <!-- Display comments section -->
-  <div *ngIf="post.comments?.length" class="comments-container">
-    <h3 mat-subheader>Comments</h3>
+  <!-- Post Details Section -->
+  <div *ngIf="post" class="post-details">
+    <mat-card class="modern-card">
+      <mat-card-header class="modern-card-header">
+        <mat-card-title class="modern-card-title">{{ post.title }}</mat-card-title>
+        <mat-card-subtitle class="modern-card-subtitle">By {{ post.author }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="modern-card-content">
+        <p>{{ post.content }}</p>
+      </mat-card-content>
+    </mat-card>
 
-    <div *ngFor="let comment of post.comments" class="comment-card">
-      <mat-card class="comment-card-content">
-        <mat-card-header>
-          <mat-card-title>{{ comment.author }}</mat-card-title>
-          <mat-card-subtitle>{{ comment.createdAt | date: 'dd MMM HH:mm' }}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <p>{{ comment.content }}</p>
-        </mat-card-content>
-      </mat-card>
+    <!-- Comments Section -->
+    <div class="comments-container">
+      <h3 mat-subheader>Comments</h3>
+
+      <!-- Using @for loop with the new syntax -->
+      @if (post.comments?.length === 0) {
+      <p>This post has no comments yet.</p>
+      }
+
+      @for (comment of post.comments; track comment.postId) {
+      <app-comment-item [comment]="comment"></app-comment-item>
+      }
+    </div>
+
+    <!-- Add New Comment Form -->
+    <div class="new-comment-form">
+      <h3 mat-subheader>Add a Comment</h3>
+      <form #commentForm="ngForm" (ngSubmit)="onSubmit(commentForm)" class="comment-form">
+        <mat-form-field appearance="outline">
+          <mat-label>Content</mat-label>
+          <textarea matInput required [(ngModel)]="newComment.content" name="content" #content="ngModel"></textarea>
+          <mat-error *ngIf="content.invalid && content.touched">Content is required!</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="commentForm.invalid">Post Comment</button>
+      </form>
     </div>
   </div>
 </div>

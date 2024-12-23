@@ -7,7 +7,6 @@
 
 /* Header Styling */
 .header-toolbar {
-  margin-bottom: 24px;
   /* Adds spacing between the header and the notifications */
   display: flex;
   justify-content: left;
@@ -15,7 +14,7 @@
   font-size: 24px;
   font-weight: 500;
   background-color: #fff;
-  /* color: #fff; */
+  margin-bottom: 30px;
 }
 
 /* Notifications List Styling */

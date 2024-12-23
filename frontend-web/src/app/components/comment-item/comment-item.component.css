@@ -1,0 +1,8 @@
+.comment-card-content {
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.comment-card mat-card-header {
+  padding: 8px;
+}

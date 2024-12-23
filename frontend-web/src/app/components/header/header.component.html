@@ -11,11 +11,11 @@
     <div class="header-right">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Posts</a>
 
-      <ng-container *ngIf="currentRole === 'editor'">
-        <a routerLink="/notifications" routerLinkActive="active">Notifications</a>
-        <a routerLink="/review" routerLinkActive="active">Review</a>
-        <a routerLink="/editor" routerLinkActive="active">Editor Dashboard</a>
-      </ng-container>
+      @if (isEditor) {
+      <a routerLink="/draft" routerLinkActive="active">Drafts</a>
+      <a routerLink="/notifications" routerLinkActive="active">Notifications</a>
+      <a routerLink="/review" routerLinkActive="active">Review</a>
+      }
     </div>
   </nav>
 </header>

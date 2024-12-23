@@ -3,7 +3,11 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px;
-  padding-bottom: 100px;
+
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically if needed */
 }
 
 /* Header Styling */
@@ -20,20 +24,10 @@
   margin-bottom: 30px;
 }
 
-/* Filter Section */
-.filter-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 24px;
-}
+.header-text {}
 
-.filter-input {
-  flex: 1;
-  min-width: 250px;
-}
 
-.create-post-btn {
+.submit-for-review-btn {
   margin-left: auto;
 }
 
@@ -44,17 +38,15 @@
   /* Allow posts to wrap */
   gap: 16px;
   /* Space between posts */
-  /* justify-content: space-between; */
-  justify-content: left;
+  justify-content: space-between;
   /* Distribute posts evenly */
 }
 
 /* Individual Post Card */
 .post-card {
-  flex: 0 0 calc(33.333% - 16px);
-  /* Exactly 3 items per row */
-  max-width: calc(33.333% - 16px);
-  /* Prevent items from exceeding their calculated width */
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -75,9 +67,7 @@
 
 /* Hover Effect for Light Theme */
 .post-card:hover {
-  transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow on hover */
 }
 
 /* Header Styling */
@@ -158,4 +148,44 @@
     /* Full width for small screens */
     max-width: 100%;
   }
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.is-invalid {
+  border-color: #d32f2f;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+button {
+  display: block;
+  margin-top: 16px;
 }

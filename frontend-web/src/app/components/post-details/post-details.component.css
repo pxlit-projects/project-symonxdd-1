@@ -1,7 +1,26 @@
+/* Container for the entire component */
 .post-details-container {
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 16px;
+}
+
+/* Header Styling */
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #FFFFFF;
+  color: #333333;
+  padding: 16px 32px;
+  /* Added more horizontal padding */
+  border-radius: 8px;
+  max-width: 1200px;
+  /* Make sure it matches the page container width */
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 mat-card {
@@ -14,16 +33,12 @@ mat-card-header {
   padding: 16px;
 }
 
-mat-card-footer {
+fcard-footer {
   display: flex;
   justify-content: flex-start;
   padding: 16px;
 }
 
-button {
-  margin-top: 16px;
-  font-weight: bold;
-}
 
 /* Loading spinner styles */
 .loading-container {
@@ -33,6 +48,7 @@ button {
   height: 100vh;
 }
 
+/* Error message styling */
 .error-message {
   display: flex;
   align-items: center;
@@ -46,31 +62,21 @@ button {
   margin-right: 8px;
 }
 
-/* Comments container styles */
-.comments-container {
+/* Post Details Styling */
+.post-details {
   margin-top: 20px;
+  max-width: 800px;
+  /* Ensure it matches the container's width */
+  margin: 0 auto;
+  /* Center it horizontally */
 }
 
-.comment-card {
-  margin-bottom: 16px;
-}
-
-.comment-card-content {
-  padding: 16px;
-}
-
-.comment-card-header {
-  background-color: #f1f1f1;
-}
-
-.comment-card mat-card-header {
-  padding: 8px;
-}
-
-/* New comment form styles */
+/* New Comment Form Styles */
 .new-comment-form {
-  margin-top: 30px;
   margin-bottom: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .comment-form mat-form-field {
@@ -80,4 +86,62 @@ button {
 
 button[type="submit"] {
   width: 100%;
+}
+
+/* Comments container styles */
+.comments-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* Comments layout */
+app-comment-item {
+  width: 100%;
+  margin-bottom: 16px;
+  /* Ensure space between comments */
+}
+
+/* Modern mat-card styling */
+.modern-card {
+  background-color: transparent;
+  /* Light blue background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.modern-card-header {
+  background-color: #242424;
+  /* Darker color for the header */
+  color: white;
+  padding: 16px;
+}
+
+.modern-card-title {
+  font-size: 1.5rem;
+  /* Larger and bold title */
+  font-weight: bold;
+  color: #ecf0f1;
+  /* Soft white color */
+}
+
+.modern-card-subtitle {
+  font-size: 1.1rem;
+  color: #bdc3c7;
+  /* Light grey for subtitle */
+}
+
+.modern-card-content {
+  padding: 16px;
+  color: #242424;
+  /* Dark text for content */
+  font-size: 1rem;
+}
+
+.modern-card-content p {
+  line-height: 1.6;
+  /* color: #34495e; */
+  /* Slightly lighter shade of dark grey for readability */
 }

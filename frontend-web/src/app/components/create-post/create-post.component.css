@@ -8,7 +8,6 @@
 
 /* Header Styling */
 .header-toolbar {
-  margin-bottom: 24px;
   /* Adds spacing between the header and the form */
   display: flex;
   justify-content: left;
@@ -17,6 +16,7 @@
   font-weight: 500;
   background-color: #fff;
   color: #333;
+  margin-bottom: 30px;
   /* Dark color for text */
 }
 

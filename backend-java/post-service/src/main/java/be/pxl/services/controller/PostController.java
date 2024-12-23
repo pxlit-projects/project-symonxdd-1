@@ -2,6 +2,7 @@ package be.pxl.services.controller;
 
 import be.pxl.services.domain.dto.CreatePostRequest;
 import be.pxl.services.domain.dto.PostDTO;
+import be.pxl.services.domain.dto.SubmitForReviewRequest;
 import be.pxl.services.domain.dto.UpdatePostRequest;
 import be.pxl.services.services.PostService;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,12 @@ public class PostController {
         return ResponseEntity.ok(post);
     }
 
+    @PostMapping("/submit-for-review")
+    public ResponseEntity<Void> submitPostForReview(@RequestBody SubmitForReviewRequest request) {
+        postService.submitPostForReview(request);
+        return ResponseEntity.ok().build();
+    }
+
     @PostMapping
     public ResponseEntity<Void> createPost(@RequestBody CreatePostRequest request) {
         postService.createPost(request);
@@ -40,14 +47,14 @@ public class PostController {
         return ResponseEntity.ok(postService.getUnpublishedPosts());
     }
 
+    @GetMapping("/drafts")
+    public ResponseEntity<List<PostDTO>> getDraftPosts() {
+        return ResponseEntity.ok(postService.getDraftPosts());
+    }
+
     @GetMapping
     public ResponseEntity<List<PostDTO>> getPublishedPosts() {
         return ResponseEntity.ok(postService.getPublishedPosts());
-    }
-
-    @GetMapping("/filter")
-    public ResponseEntity<List<PostDTO>> filterPosts(@RequestParam String category, @RequestParam String author) {
-        return ResponseEntity.ok(postService.filterPosts(category, author));
     }
 }
 

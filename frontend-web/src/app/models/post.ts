@@ -7,6 +7,5 @@ export interface Post {
   author: string;
   status?: string;
   createdAt?: string;
-  // createdAt: Date;
   comments?: Comment[];
 }

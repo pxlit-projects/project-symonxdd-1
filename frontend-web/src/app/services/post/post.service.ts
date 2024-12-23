@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Post } from '../../models/post';
@@ -20,6 +20,19 @@ export class PostService {
     );
   }
 
+  getDrafts(): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.endpoint}/drafts`).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  submitPostForReview(postId: number): Observable<Post> {
+    return this.http.post<Post>(`${this.endpoint}/submit-for-review`, postId).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+
   getPostById(id: number): Observable<Post> {
     return this.http.get<Post>(`${this.endpoint}/${id}`).pipe(
       catchError(this.handleError)
@@ -34,6 +47,12 @@ export class PostService {
 
   createPost(newPost: Post): Observable<Post> {
     return this.http.post<Post>(this.endpoint, newPost).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  updatePost(updatedPost: Post): Observable<HttpResponse<any>> {
+    return this.http.put<HttpResponse<any>>(`${this.endpoint}/${updatedPost.id}`, updatedPost, { observe: 'response' }).pipe(
       catchError(this.handleError)
     );
   }

@@ -1,3 +1,12 @@
-<button mat-button (click)="toggleRole()">
-  Switch to {{ currentRole === 'user' ? 'Editor' : 'User' }} Mode
-</button>
+<div class="role-selector-container">
+  <mat-form-field appearance="outline" class="dropdown-field">
+    <mat-label>Select Role</mat-label>
+    <mat-select [(value)]="currentRole" (selectionChange)="onRoleChange($event.value)">
+      @for (key of roleKeys; track key) {
+      <mat-option [value]="userRoles[key]">
+        {{ userRoles[key] }}
+      </mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+</div>

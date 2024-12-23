@@ -3,7 +3,6 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px;
-  padding-bottom: 100px;
 }
 
 /* Header Styling */
@@ -20,18 +19,8 @@
   margin-bottom: 30px;
 }
 
-/* Filter Section */
-.filter-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 24px;
-}
+.header-text {}
 
-.filter-input {
-  flex: 1;
-  min-width: 250px;
-}
 
 .create-post-btn {
   margin-left: auto;
@@ -44,8 +33,7 @@
   /* Allow posts to wrap */
   gap: 16px;
   /* Space between posts */
-  /* justify-content: space-between; */
-  justify-content: left;
+  justify-content: space-between;
   /* Distribute posts evenly */
 }
 

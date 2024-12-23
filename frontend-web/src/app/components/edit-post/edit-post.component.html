@@ -1,0 +1,72 @@
+<div class="post-container">
+  <!-- Header Section -->
+  <mat-toolbar color="primary" class="header-toolbar">
+    <span class="header-text">Edit Post</span>
+
+    <button mat-raised-button color="accent" class="submit-for-review-btn" (click)="submitPostForReview()">Submit for
+      Review
+    </button>
+
+  </mat-toolbar>
+
+  <!-- Post Edit Section -->
+  @if(post) {
+  <div class="post-card">
+    <!-- Post Metadata -->
+    <div class="post-card-header">
+      <div class="post-card-title">Post ID: {{ post.id }}</div>
+      <div class="post-card-subtitle">Status:
+        <span [ngClass]="{
+            'status': true,
+            'approved': post.status === 'approved',
+            'rejected': post.status === 'rejected',
+            'pending': post.status === 'pending'
+          }">{{ post.status }}</span>
+      </div>
+      <div class="created-at">Created At: {{ post.createdAt }}</div>
+    </div>
+
+    <!-- Editable Fields -->
+    <form [formGroup]="postForm" (ngSubmit)="savePost()">
+      <!-- Title Field -->
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input id="title" type="text" class="form-control" formControlName="title"
+          [ngClass]="{'is-invalid': postForm.get('title')?.invalid && (postForm.get('title')?.touched || postForm.get('title')?.dirty)}" />
+        @if (postForm.get('title')?.invalid && (postForm.get('title')?.touched || postForm.get('title')?.dirty)) {
+        <div class="error-message">
+          @if (postForm.get('title')?.errors?.['required']) {
+          <small>Title is required.</small>
+          }
+          @if (postForm.get('title')?.errors?.['minlength']) {
+          <small>Title must be at least 5 characters long.</small>
+          }
+        </div>
+        }
+      </div>
+
+      <!-- Content Field -->
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea id="content" class="form-control" formControlName="content" rows="5"
+          [ngClass]="{'is-invalid': postForm.get('content')?.invalid && (postForm.get('content')?.touched || postForm.get('content')?.dirty)}"></textarea>
+        @if (postForm.get('content')?.invalid && (postForm.get('content')?.touched || postForm.get('content')?.dirty)) {
+        <div class="error-message">
+          @if (postForm.get('content')?.errors?.['required']) {
+          <small>Content is required.</small>
+          }
+          @if (postForm.get('content')?.errors?.['minlength']) {
+          <small>Content must be at least 10 characters long.</small>
+          }
+        </div>
+        }
+      </div>
+
+      <!-- Save Button -->
+      <button type="submit" mat-raised-button color="primary" [disabled]="postForm.invalid">
+        Update
+      </button>
+    </form>
+  </div>
+  }
+</div>
