@@ -1,0 +1,10 @@
+<div class="editable-comment">
+  <mat-form-field class="comment-edit-field" appearance="fill">
+    <mat-label>Edit Comment</mat-label>
+    <input matInput [(ngModel)]="editableComment.content" />
+  </mat-form-field>
+  <div class="edit-actions">
+    <button mat-stroked-button color="primary" (click)="saveComment()">Save</button>
+    <button mat-stroked-button color="warn" (click)="cancelEdit()">Cancel</button>
+  </div>
+</div>

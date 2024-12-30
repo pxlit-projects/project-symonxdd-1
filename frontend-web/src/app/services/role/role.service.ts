@@ -3,12 +3,6 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { UserRoles } from '../../enums/user-roles.enum';
 
-// export enum UserRoles {
-//   EDITOR = 'Editor',
-//   USER1 = 'Moka',
-//   USER2 = 'Andrew Tate',
-// }
-
 @Injectable({
   providedIn: 'root',
 })

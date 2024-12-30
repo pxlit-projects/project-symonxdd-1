@@ -33,7 +33,7 @@
   /* Allow posts to wrap */
   gap: 16px;
   /* Space between posts */
-  justify-content: space-between;
+  justify-content: left;
   /* Distribute posts evenly */
 }
 

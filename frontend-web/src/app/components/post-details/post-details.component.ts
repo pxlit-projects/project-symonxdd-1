@@ -18,6 +18,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CommentItemComponent } from "../comment-item/comment-item.component";
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
+import { UserRoles } from '../../enums/user-roles.enum';
+import { EditCommentComponent } from '../edit-comment/edit-comment.component';
 
 @Component({
   selector: 'app-post-details',
@@ -44,15 +48,19 @@ export class PostDetailsComponent implements OnInit {
   post!: Post;
   isLoading = true;
   errorMessage: string | null = null;
-  newComment: Comment = { content: '', createdAt: '', author: '', postId: 0 };  // Initialize postId to 0 initially
-  currentRole: string = '';  // Holds the current role (author)
+  newComment: Comment = { content: '', createdAt: '', author: UserRoles.EDITOR, postId: 0 };  // Initialize postId to 0 initially
+  currentRole!: UserRoles; // Holds the current role (author)
+  // editingCommentId: number | null = null;
+  editingCommentId: number | undefined = undefined;
+  editableComment: Comment = { postId: undefined, id: undefined, content: '' };
 
   constructor(
     private postService: PostService,
     private commentService: CommentService, // Inject CommentService
     private roleService: RoleService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -61,9 +69,21 @@ export class PostDetailsComponent implements OnInit {
     this.postService.getPostById(postId).subscribe({
       next: (data) => {
         this.post = data;
+
+        // Sort comments by date (most recent first), handling undefined `createdAt`
+        if (this.post.comments) {
+          this.post.comments.sort((a, b) => {
+            const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+            const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+            return dateB - dateA;
+          });
+        }
+
         // Assign postId only if data.id is defined, else fallback to a default value (e.g., 0)
         this.newComment.postId = data.id ?? 0; // Use the nullish coalescing operator to fall back to 0 if undefined
         this.isLoading = false;
+
+        console.log(this.post);
       },
       error: (err) => {
         this.errorMessage = 'Error fetching post details!';
@@ -98,6 +118,15 @@ export class PostDetailsComponent implements OnInit {
         next: () => {
           this.newComment.content = ''; // Clear the comment content after successful submission
           this.post?.comments?.push(commentToPost); // Add the new comment to the post's comment list
+
+          // Sort comments after adding a new one, handling undefined `createdAt`
+          if (this.post.comments) {
+            this.post.comments.sort((a, b) => {
+              const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+              const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+              return dateB - dateA;
+            });
+          }
         },
         error: (err) => {
           this.errorMessage = 'Error posting comment!';
@@ -108,4 +137,66 @@ export class PostDetailsComponent implements OnInit {
   navigateToPostEditor(postId: number): void {
     this.router.navigate(['/post/edit', postId]);
   }
+
+  // Check if the current user's role matches the one required
+  isCorrectRole(commentAuthor: UserRoles): boolean {
+    return this.roleService.getRole() === commentAuthor;
+  }
+
+  onEditComment(comment: Comment): void {
+    this.editingCommentId = comment.id;
+    this.editableComment = { ...comment }; // Clone the comment for editing
+  }
+
+  onSaveComment(updatedComment: Comment): void {
+    const commentIndex = this.post.comments!.findIndex((c) => c.id === updatedComment.id);
+    if (commentIndex > -1) {
+      this.post.comments![commentIndex] = updatedComment; // Update the local comments list
+
+      // Sort comments after editing, handling undefined `createdAt`
+      this.post.comments!.sort((a, b) => {
+        const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return dateB - dateA;
+      });
+    }
+
+    this.editingCommentId = undefined; // Exit edit mode
+  }
+
+  onCancelEdit(): void {
+    this.editingCommentId = undefined; // Exit edit mode without saving
+    this.editableComment = { id: undefined, content: '' };
+  }
+
+  onCommentDeleted(commentId: number): void {
+    this.commentService.deleteComment(commentId).subscribe(() => {
+      console.log('Comment deleted successfully!');
+      this.post.comments = this.post.comments!.filter((c) => c.id !== commentId);
+    });
+  }
+
+  onCommentEdited(updatedComment: Comment): void {
+    const index = this.post.comments!.findIndex((c) => c.id === updatedComment.id);
+    if (index > -1) {
+      this.post.comments![index] = updatedComment;
+
+      // Sort comments after editing, handling undefined `createdAt`
+      this.post.comments!.sort((a, b) => {
+        const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return dateB - dateA;
+      });
+    }
+
+    this.commentService.updateComment(updatedComment).subscribe(() => {
+      console.log('Comment edited successfully!');
+    });
+  }
+
+  isEditor(): boolean {
+    return this.currentRole === UserRoles.EDITOR;
+  }
+
+
 }

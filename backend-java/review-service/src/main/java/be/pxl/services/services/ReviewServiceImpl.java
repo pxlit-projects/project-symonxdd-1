@@ -5,6 +5,8 @@ import be.pxl.services.domain.dto.NotificationDTO;
 import be.pxl.services.domain.dto.ReviewRequest;
 import be.pxl.services.repo.ReviewRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Service;
 public class ReviewServiceImpl implements ReviewService {
     private final ReviewRepository reviewRepository;
     private final RabbitTemplate rabbitTemplate;
+    private static final Logger logger = LoggerFactory.getLogger(ReviewServiceImpl.class);
 
     @Override
     public void approveReview(ReviewRequest request) {
@@ -28,6 +31,7 @@ public class ReviewServiceImpl implements ReviewService {
                 .build();
 
         rabbitTemplate.convertAndSend("review_exchange", notification);
+        logger.info("Approved review: {}", review);
     }
 
     @Override
@@ -44,5 +48,6 @@ public class ReviewServiceImpl implements ReviewService {
                 .build();
 
         rabbitTemplate.convertAndSend("review_exchange", notification);
+        logger.info("Rejected review: {}", review);
     }
 }

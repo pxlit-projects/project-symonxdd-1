@@ -2,6 +2,7 @@ package be.pxl.services.seed;
 
 import be.pxl.services.domain.Post;
 import be.pxl.services.domain.PostStatus;
+import be.pxl.services.domain.UserRoles;
 import be.pxl.services.repo.PostRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
@@ -28,7 +29,7 @@ public class PostDataSeeder implements CommandLineRunner {
                             Post.builder()
                                     .title("The Future of Technology")
                                     .content("Exploring the latest advancements in AI and robotics.")
-                                    .author("editor")
+                                    .author(UserRoles.EDITOR.getDisplayName())
                                     .status(PostStatus.APPROVED)
                                     .createdAt(LocalDateTime.now().minusDays(10))
                                     .updatedAt(LocalDateTime.now().minusDays(2))
@@ -36,7 +37,7 @@ public class PostDataSeeder implements CommandLineRunner {
                             Post.builder()
                                     .title("The Importance of Mental Health")
                                     .content("Why mental health should be prioritized.")
-                                    .author("editor")
+                                    .author(UserRoles.EDITOR.getDisplayName())
                                     .status(PostStatus.PENDING_REVIEW)
                                     .createdAt(LocalDateTime.now().minusDays(5))
                                     .updatedAt(LocalDateTime.now())
@@ -44,7 +45,7 @@ public class PostDataSeeder implements CommandLineRunner {
                             Post.builder()
                                     .title("Sustainable Living")
                                     .content("Tips and tricks for an eco-friendly lifestyle.")
-                                    .author("editor")
+                                    .author(UserRoles.EDITOR.getDisplayName())
                                     .status(PostStatus.REJECTED)
                                     .createdAt(LocalDateTime.now().minusDays(8))
                                     .updatedAt(LocalDateTime.now().minusDays(3))
@@ -52,7 +53,7 @@ public class PostDataSeeder implements CommandLineRunner {
                             Post.builder()
                                     .title("A Beginner's Guide to Cloud Computing")
                                     .content("Discover the fundamentals of cloud computing and how to get started with popular platforms like AWS, Azure, and Google Cloud.")
-                                    .author("editor")
+                                    .author(UserRoles.EDITOR.getDisplayName())
                                     .status(PostStatus.DRAFT)
                                     .createdAt(LocalDateTime.now())
                                     .updatedAt(LocalDateTime.now())

@@ -1,6 +1,7 @@
 package be.pxl.services.seed;
 
 import be.pxl.services.domain.Comment;
+import be.pxl.services.domain.UserRoles;
 import be.pxl.services.repo.CommentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
@@ -27,21 +28,21 @@ public class CommentDataSeeder implements CommandLineRunner {
                             Comment.builder()
                                     .postId(1L)
                                     .content("This is such a well-written post!")
-                                    .author("Mike Brown")
+                                    .author(UserRoles.USER1.getDisplayName())
                                     .createdAt(LocalDateTime.now().minusDays(2))
                                     .updatedAt(LocalDateTime.now())
                                     .build(),
                             Comment.builder()
                                     .postId(1L)
                                     .content("I completely agree with your points!")
-                                    .author("Sarah White")
+                                    .author(UserRoles.USER2.getDisplayName())
                                     .createdAt(LocalDateTime.now().minusDays(1))
                                     .updatedAt(LocalDateTime.now())
                                     .build(),
                             Comment.builder()
                                     .postId(2L)
                                     .content("Mental health awareness is crucial.")
-                                    .author("Emily Davis")
+                                    .author(UserRoles.EDITOR.getDisplayName())
                                     .createdAt(LocalDateTime.now().minusHours(10))
                                     .updatedAt(LocalDateTime.now())
                                     .build()

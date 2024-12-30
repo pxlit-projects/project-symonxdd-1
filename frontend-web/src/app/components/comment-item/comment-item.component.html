@@ -1,9 +1,33 @@
-<mat-card class="comment-card-content">
-  <mat-card-header>
-    <mat-card-title>{{ comment.author }}</mat-card-title>
-    <mat-card-subtitle>{{ comment.createdAt | date: 'dd MMM HH:mm' }}</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
+<div class="comment-item">
+  <div class="comment-header">
+    <!-- Author and Date Container -->
+    <div class="comment-author-date">
+      <span class="comment-author">{{ comment.author }}</span>
+      <span class="comment-date">{{ comment.createdAt | date: 'short' }}</span>
+    </div>
+
+    <!-- Action Buttons -->
+    <ng-container *ngIf="isEditable">
+      <button mat-icon-button class="edit-btn" (click)="onEdit()">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button class="delete-btn" (click)="onDelete()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </ng-container>
+  </div>
+
+  <div class="comment-content" *ngIf="!isEditing">
     <p>{{ comment.content }}</p>
-  </mat-card-content>
-</mat-card>
+  </div>
+
+  <div class="comment-edit" *ngIf="isEditing">
+    <mat-form-field class="comment-edit-field" appearance="outline">
+      <textarea matInput [(ngModel)]="editableContent"></textarea>
+    </mat-form-field>
+    <div class="edit-actions">
+      <button mat-stroked-button color="primary" (click)="saveEdit()">Save</button>
+      <button mat-stroked-button color="warn" (click)="cancelEdit()">Cancel</button>
+    </div>
+  </div>
+</div>
