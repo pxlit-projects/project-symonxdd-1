@@ -12,10 +12,6 @@ export class NotificationService {
 
   constructor(private http: HttpClient) { }
 
-  // getNotifications(): Observable<Notification[]> {
-  //   return this.http.get<Notification[]>(this.endpoint);
-  // }
-
   getNotifications(): Observable<Notification[]> {
     return this.http.get<Notification[]>(this.endpoint).pipe(
       tap((data) => console.log('Fetched notifications from API:', data)) // Log fetched data

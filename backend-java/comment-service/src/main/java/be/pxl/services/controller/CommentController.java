@@ -1,5 +1,6 @@
 package be.pxl.services.controller;
 
+import be.pxl.services.domain.UserRoles;
 import be.pxl.services.domain.dto.CommentDTO;
 import be.pxl.services.domain.dto.CreateCommentRequest;
 import be.pxl.services.domain.dto.UpdateCommentRequest;
@@ -23,14 +24,17 @@ public class CommentController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteComment(@PathVariable Long id) {
-        commentService.deleteComment(id);
+    public ResponseEntity<Void> deleteComment(@RequestHeader("Role") String role, @PathVariable Long id) {
+        commentService.deleteComment(id, role);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
     @PutMapping("/edit/{id}")
-    public ResponseEntity<CommentDTO> updateComment(@PathVariable Long id, @RequestBody UpdateCommentRequest request) {
-        return ResponseEntity.ok(commentService.updateComment(id, request));
+    public ResponseEntity<CommentDTO> updateComment(
+            @PathVariable Long id,
+            @RequestBody UpdateCommentRequest request,
+            @RequestHeader("Role") String role) {
+        return ResponseEntity.ok(commentService.updateComment(id, request, role));
     }
 
     // used by the CommentServiceClient in PostService's PostServiceImpl
