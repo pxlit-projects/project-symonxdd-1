@@ -1,7 +1,31 @@
 # Fullstack Java Project
 
-## Firstname Lastname (Class)
-Change the name and Class in the title above
+## Symon Blazejczak (3AONb)
+
+## Setup
+
+**It's possible that you need to wait around half a minute for the discovery service and who knows what else is ready, before anything shows up in the Angular app.**
+
+### Backend
+
+0. Open 'backend-java' folder in an IDE (recommended: IntelliJ IDEA)
+1. Start Docker Desktop
+2. Run `docker compose up` in the 'backend-java' folder (contains `docker-compose.yml`)
+3. Run all microservices by going to the 'Services' tab in the bottom-left side. 
+
+- Make sure to first run these 3 in this order, the others can be run in any order:
+  - a. ConfigServiceApp
+  - b. DiscoveryServiceApp
+  - c. GatewayServiceApp
+
+- Run each microservice **one by one** to prevent interesing issues...
+
+### Frontend
+
+0. Open 'frontend-web' folder in an IDE (recommended: VSCode)
+1. Run `ng serve -o`
+
+
 
 ## Folder structure
 
@@ -11,10 +35,3 @@ Change the name and Class in the title above
 - _backend-java_: contains microservices written in java
 - _demo-artifacts_: contains images, files, etc that are useful for demo purposes.
 - _frontend-web_: contains the Angular webclient
-
-Each folder contains its own specific `.gitignore` file.  
-**:warning: complete these files asap, so you don't litter your repository with binary build artifacts!**
-
-## How to setup and run this application
-
-:heavy_check_mark:_(COMMENT) Add setup instructions and provide some direction to run the whole  application: frontend to backend._
