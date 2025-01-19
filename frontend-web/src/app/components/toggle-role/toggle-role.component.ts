@@ -38,39 +38,9 @@ export class ToggleRoleComponent implements OnInit {
     this.roleService.role$.subscribe((role) => (this.currentRole = role));
   }
 
-  // onRoleChange(newRole: UserRoles) {
-  //   this.roleService.setRole(newRole);
-  //   if (newRole === UserRoles.USER1 && this.router.url !== '/') {
-  //     this.router.navigate(['/']);
-  //   }
-  // }
-
   onRoleChange(newRole: UserRoles) {
     // Set the new role
     this.roleService.setRole(newRole);
-
-    // Check if the current route is an admin-protected route
-    const currentUrl = this.router.url;
-
-    const isAdminRoute = this.router.config.some(route => {
-      // Check if the route has a dynamic path, e.g., '/post/:id'
-      const routePath = route.path || '';
-
-      // Check if the current route matches the admin route
-      const isMatch = currentUrl.includes(routePath);
-
-      // Check if the route has an AdminGuard
-      const hasGuard = route.canActivate?.includes(AdminGuard);
-
-      // Return true if both match and the route is protected by AdminGuard
-      return isMatch && hasGuard;
-    });
-
-
-    // If switching to a non-admin role (USER1 or USER2) on an admin route, redirect to '/'
-    if (isAdminRoute && (newRole === UserRoles.USER1 || newRole === UserRoles.USER2)) {
-      this.router.navigate(['/']);
-    }
+    this.router.navigate(['/']);
   }
-
 }

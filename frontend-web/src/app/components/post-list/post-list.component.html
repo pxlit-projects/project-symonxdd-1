@@ -3,10 +3,10 @@
   <mat-toolbar color="primary" class="header-toolbar">
     <span class="header-text">Published Posts</span>
 
-    <ng-container *ngIf="currentRole === 'editor'">
-      <button mat-raised-button color="accent" class="create-post-btn" (click)="navigateToCreatePost()">Create New
-        Post</button>
-    </ng-container>
+    @if (currentRole === 'Editor') {
+    <button mat-raised-button color="accent" class="create-post-btn" (click)="navigateToCreatePost()">Create New
+      Post</button>
+    }
   </mat-toolbar>
 
   <!-- Filter Section -->

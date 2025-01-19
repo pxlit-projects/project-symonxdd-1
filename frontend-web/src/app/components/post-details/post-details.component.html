@@ -1,7 +1,3 @@
-<div *ngIf="isLoading" class="loading-container">
-  <mat-spinner></mat-spinner>
-</div>
-
 <!-- Post Details Section -->
 <div class="post-details-container">
   <mat-toolbar color="primary" class="header-toolbar">
@@ -15,56 +11,60 @@
   </mat-toolbar>
 
   <!-- Error Message Section -->
-  <div *ngIf="errorMessage" class="error-message">
-    <mat-icon>error</mat-icon>
-    <p>{{ errorMessage }}</p>
-  </div>
+  @if(errorMessage) {
+  <mat-icon>error</mat-icon>
+  <p>{{ errorMessage }}</p>
+
+  }
 
   <!-- Post Details Section -->
-  <div *ngIf="post" class="post-details">
-    <mat-card class="modern-card">
-      <mat-card-header class="modern-card-header">
-        <mat-card-title class="modern-card-title">{{ post.title }}</mat-card-title>
-        <mat-card-subtitle class="modern-card-subtitle">By {{ post.author }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content class="modern-card-content">
-        <p>{{ post.content }}</p>
-      </mat-card-content>
-    </mat-card>
+  @if (post) {
+  <div class="post-details"></div>
+  <mat-card class="modern-card">
+    <mat-card-header class="modern-card-header">
+      <mat-card-title class="modern-card-title">{{ post.title }}</mat-card-title>
+      <mat-card-subtitle class="modern-card-subtitle">By {{ post.author }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="modern-card-content">
+      <p>{{ post.content }}</p>
+    </mat-card-content>
+  </mat-card>
 
-    <!-- Comments and New Comment Form Section -->
-    <div class="comments-container">
-      <h3 mat-subheader>Comments</h3>
+  <!-- Comments and New Comment Form Section -->
+  <div class="comments-container">
+    <h3 mat-subheader>Comments</h3>
 
-      <!-- Show message if no comments -->
-      <ng-container *ngIf="post.comments?.length === 0">
-        <p class="no-comments-message">This post has no comments yet.</p>
-      </ng-container>
+    <!-- Show message if no comments -->
+    @if (post.comments?.length === 0) {
+    <p class="no-comments-message">This post has no comments yet.</p>
+    }
 
-      <!-- Iterate over comments using comment-item component -->
-      <ng-container *ngFor="let comment of post.comments">
-        <app-comment-item [comment]="comment" [isEditable]="isCorrectRole(comment.author!)"
-          (commentEdited)="onCommentEdited($event)" (commentDeleted)="onCommentDeleted($event)">
-        </app-comment-item>
-      </ng-container>
+    <!-- Iterate over comments using comment-item component -->
+    @for (comment of post.comments; track comment.id) {
+    <app-comment-item [comment]="comment" [isEditable]="isCorrectRole(comment.author!)"
+      (commentEdited)="onCommentEdited($event)" (commentDeleted)="onCommentDeleted($event)">
+    </app-comment-item>
+    }
 
-      <!-- Add New Comment Form -->
-      <div class="new-comment-form">
-        <h3 mat-subheader>Add a Comment</h3>
-        <form #commentForm="ngForm" (ngSubmit)="onSubmit(commentForm)" class="comment-form">
-          <mat-form-field appearance="outline">
-            <mat-label>Content</mat-label>
-            <textarea matInput required [(ngModel)]="newComment.content" name="content" #content="ngModel"></textarea>
-            <mat-error *ngIf="content.invalid && content.touched">
-              Content is required!
-            </mat-error>
-          </mat-form-field>
-          <button mat-raised-button color="primary" type="submit" [disabled]="commentForm.invalid">
-            Post Comment
-          </button>
-        </form>
-      </div>
+    <!-- Add New Comment Form -->
+    <div class="new-comment-form">
+      <h3 mat-subheader>Add a Comment</h3>
+      <form #commentForm="ngForm" (ngSubmit)="onSubmit(commentForm)" class="comment-form">
+        <mat-form-field appearance="outline">
+          <mat-label>Content</mat-label>
+          <textarea matInput required [(ngModel)]="newComment.content" name="content" #content="ngModel"></textarea>
 
+          @if (content.invalid && content.touched) {
+          <mat-error>Content is required!</mat-error>
+          }
+
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="commentForm.invalid">
+          Post Comment
+        </button>
+      </form>
     </div>
   </div>
+
+  }
 </div>

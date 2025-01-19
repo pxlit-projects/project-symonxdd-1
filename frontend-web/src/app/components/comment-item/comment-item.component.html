@@ -7,27 +7,28 @@
     </div>
 
     <!-- Action Buttons -->
-    <ng-container *ngIf="isEditable">
-      <button mat-icon-button class="edit-btn" (click)="onEdit()">
-        <mat-icon>edit</mat-icon>
-      </button>
-      <button mat-icon-button class="delete-btn" (click)="onDelete()">
-        <mat-icon>delete</mat-icon>
-      </button>
-    </ng-container>
+    @if (isEditable) {
+    <button mat-icon-button class="edit-btn" (click)="onEdit()">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button class="delete-btn" (click)="onDelete()">
+      <mat-icon>delete</mat-icon>
+    </button>
+    }
+
   </div>
 
-  <div class="comment-content" *ngIf="!isEditing">
-    <p>{{ comment.content }}</p>
-  </div>
+  @if (!isEditing) {
+  <p>{{ comment.content }}</p>
+  }
 
-  <div class="comment-edit" *ngIf="isEditing">
-    <mat-form-field class="comment-edit-field" appearance="outline">
-      <textarea matInput [(ngModel)]="editableContent"></textarea>
-    </mat-form-field>
-    <div class="edit-actions">
-      <button mat-stroked-button color="primary" (click)="saveEdit()">Save</button>
-      <button mat-stroked-button color="warn" (click)="cancelEdit()">Cancel</button>
-    </div>
+  @if (isEditing) {
+  <mat-form-field class="comment-edit-field" appearance="outline">
+    <textarea matInput [(ngModel)]="editableContent"></textarea>
+  </mat-form-field>
+  <div class="edit-actions">
+    <button mat-stroked-button color="primary" (click)="saveEdit()">Save</button>
+    <button mat-stroked-button color="warn" (click)="cancelEdit()">Cancel</button>
   </div>
+  }
 </div>

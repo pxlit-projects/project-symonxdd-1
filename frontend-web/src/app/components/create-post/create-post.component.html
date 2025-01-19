@@ -10,15 +10,24 @@
       <mat-form-field appearance="outline" class="form-input">
         <mat-label>Title</mat-label>
         <input matInput formControlName="title" placeholder="Post Title" required />
-        <mat-error *ngIf="postForm.get('title')?.hasError('required')">Title is required.</mat-error>
-        <mat-error *ngIf="postForm.get('title')?.hasError('maxlength')">Title can't be longer than 100
-          characters.</mat-error>
+
+        @if (postForm.get('title')?.hasError('required')) {
+        <mat-error>Title is required.</mat-error>
+        }
+        @if (postForm.get('title')?.hasError('maxlength')) {
+        <mat-error>Title can't be longer than 100 characters.</mat-error>
+        }
+
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="form-input">
         <mat-label>Content</mat-label>
         <textarea matInput formControlName="content" placeholder="Post Content" required></textarea>
-        <mat-error *ngIf="postForm.get('content')?.hasError('required')">Content is required.</mat-error>
+
+        @if (postForm.get('content')?.hasError('required')) {
+        <mat-error>Content is required.</mat-error>
+        }
+
       </mat-form-field>
     </div>
 

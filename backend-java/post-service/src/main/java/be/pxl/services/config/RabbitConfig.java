@@ -8,8 +8,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
+@Profile("!test")
 public class RabbitConfig {
 
     // In order to Create Our Queue, we simply define a bean of type Queue.

@@ -13,9 +13,10 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class ReviewServiceImpl implements ReviewService {
+
+    private static final Logger logger = LoggerFactory.getLogger(ReviewServiceImpl.class);
     private final ReviewRepository reviewRepository;
     private final RabbitTemplate rabbitTemplate;
-    private static final Logger logger = LoggerFactory.getLogger(ReviewServiceImpl.class);
 
     @Override
     public void approveReview(ReviewRequest request) {

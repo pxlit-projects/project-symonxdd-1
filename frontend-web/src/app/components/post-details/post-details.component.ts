@@ -1,4 +1,4 @@
-import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
+import { Component, OnInit, LOCALE_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PostService } from '../../services/post/post.service';
 import { CommentService } from '../../services/comment/comment.service'; // Import CommentService
@@ -18,10 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CommentItemComponent } from "../comment-item/comment-item.component";
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatDialog } from '@angular/material/dialog';
-import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 import { UserRoles } from '../../enums/user-roles.enum';
-import { EditCommentComponent } from '../edit-comment/edit-comment.component';
 
 @Component({
   selector: 'app-post-details',
@@ -46,7 +43,6 @@ import { EditCommentComponent } from '../edit-comment/edit-comment.component';
 })
 export class PostDetailsComponent implements OnInit {
   post!: Post;
-  isLoading = true;
   errorMessage: string | null = null;
   newComment: Comment = { content: '', createdAt: '', author: UserRoles.EDITOR, postId: 0 };  // Initialize postId to 0 initially
   currentRole!: UserRoles; // Holds the current role (author)
@@ -59,8 +55,7 @@ export class PostDetailsComponent implements OnInit {
     private commentService: CommentService, // Inject CommentService
     private roleService: RoleService,
     private route: ActivatedRoute,
-    private router: Router,
-    private dialog: MatDialog,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -80,14 +75,12 @@ export class PostDetailsComponent implements OnInit {
         }
 
         // Assign postId only if data.id is defined, else fallback to a default value (e.g., 0)
-        this.newComment.postId = data.id ?? 0; // Use the nullish coalescing operator to fall back to 0 if undefined
-        this.isLoading = false;
+        this.newComment.postId = data.id; // Use the nullish coalescing operator to fall back to 0 if undefined
 
         console.log(this.post);
       },
       error: (err) => {
         this.errorMessage = 'Error fetching post details!';
-        this.isLoading = false;
       },
     });
 
@@ -120,13 +113,11 @@ export class PostDetailsComponent implements OnInit {
           this.post?.comments?.push(commentToPost); // Add the new comment to the post's comment list
 
           // Sort comments after adding a new one, handling undefined `createdAt`
-          if (this.post.comments) {
-            this.post.comments.sort((a, b) => {
-              const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
-              const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
-              return dateB - dateA;
-            });
-          }
+          this.post.comments?.sort((a, b) => {
+            const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+            const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+            return dateB - dateA;
+          });
         },
         error: (err) => {
           this.errorMessage = 'Error posting comment!';
@@ -178,16 +169,14 @@ export class PostDetailsComponent implements OnInit {
 
   onCommentEdited(updatedComment: Comment): void {
     const index = this.post.comments!.findIndex((c) => c.id === updatedComment.id);
-    if (index > -1) {
-      this.post.comments![index] = updatedComment;
+    this.post.comments![index] = updatedComment;
 
-      // Sort comments after editing, handling undefined `createdAt`
-      this.post.comments!.sort((a, b) => {
-        const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
-        const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
-        return dateB - dateA;
-      });
-    }
+    // Sort comments after editing, handling undefined `createdAt`
+    this.post.comments!.sort((a, b) => {
+      const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+      const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+      return dateB - dateA;
+    });
 
     this.commentService.updateComment(updatedComment).subscribe(() => {
       console.log('Comment edited successfully!');
@@ -197,6 +186,4 @@ export class PostDetailsComponent implements OnInit {
   isEditor(): boolean {
     return this.currentRole === UserRoles.EDITOR;
   }
-
-
 }

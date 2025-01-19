@@ -5,29 +5,35 @@
   </mat-toolbar>
 
   <!-- Error Message -->
-  <div *ngIf="errorMessage" class="error-message">
+  @if (errorMessage) {
+  <div class="error-message">
     <mat-icon>error</mat-icon>
     <p>{{ errorMessage }}</p>
   </div>
+  }
 
   <!-- Notifications List -->
-  <div *ngIf="notifications.length > 0">
-    <div *ngFor="let notification of notifications" class="notification-item">
-      <mat-card class="notification-card">
-        <mat-card-header>
-          <mat-card-title>Post ID: {{ notification.postId }}</mat-card-title>
-          <mat-card-subtitle>{{ notification.createdAt | date: 'short' }}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <p>{{ notification.message }}</p>
-        </mat-card-content>
-      </mat-card>
-    </div>
+  @if (notifications.length > 0) {
+  @for (notification of notifications; track notification.createdAt) {
+  <div class="notification-item">
+    <mat-card class="notification-card">
+      <mat-card-header>
+        <mat-card-title>Post ID: {{ notification.postId }}</mat-card-title>
+        <mat-card-subtitle>{{ notification.createdAt | date: 'short' }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ notification.message }}</p>
+      </mat-card-content>
+    </mat-card>
   </div>
+  }
+  }
 
   <!-- No Notifications State -->
-  <div *ngIf="notifications.length === 0" class="no-notifications">
+  @if(notifications.length === 0) {
+  <div class="no-notifications">
     <mat-icon>notifications_off</mat-icon>
     <p>No notifications available.</p>
   </div>
+  }
 </div>

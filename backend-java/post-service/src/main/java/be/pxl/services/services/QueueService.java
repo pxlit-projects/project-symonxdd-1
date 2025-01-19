@@ -24,7 +24,7 @@ public class QueueService {
 
     @RabbitListener(queues = "review_exchange")
     public void listen(NotificationDTO notificationDTO) {
-        System.out.println("Message read from review_exchange : " + notificationDTO.getMessage());
+        logger.info("Message read from review_exchange : " + notificationDTO.getMessage());
 
         // Update post
         Post post = postRepository.findById(notificationDTO.getPostId())
@@ -37,11 +37,14 @@ public class QueueService {
                 ? "Post with ID " + notificationDTO.getPostId() + " has been approved."
                 : "Post with ID " + notificationDTO.getPostId() + " has been rejected. Remark: " + notificationDTO.getMessage();
 
+        logger.info("Creating notification {}", message);
+
         Notification notification = Notification.builder()
                 .postId(notificationDTO.getPostId())
                 .message(message)
                 .createdAt(LocalDateTime.now())
                 .build();
         notificationRepository.save(notification);
+        logger.info("Notification {} created and saved to DB", notificationDTO.getPostId());
     }
 }

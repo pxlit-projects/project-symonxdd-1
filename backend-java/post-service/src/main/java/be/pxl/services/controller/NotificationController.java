@@ -5,6 +5,8 @@ import be.pxl.services.domain.UserRoles;
 import be.pxl.services.domain.dto.NotificationDTO;
 import be.pxl.services.repo.NotificationRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,11 +20,14 @@ import java.util.List;
 @RequestMapping("/api/notifications")
 @RequiredArgsConstructor
 public class NotificationController {
+
+    private static final Logger logger = LoggerFactory.getLogger(NotificationController.class);
     private final NotificationRepository notificationRepository;
 
     @GetMapping
     public ResponseEntity<List<NotificationDTO>> getNotifications(@RequestHeader("Role") String role) {
         if (!role.equalsIgnoreCase(UserRoles.EDITOR.getDisplayName())) {
+            logger.info("Can't submit for review, FORBIDDEN");
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
 
@@ -38,6 +43,7 @@ public class NotificationController {
                     .build())
             .toList();
 
+        logger.info("Returning notifications");
         return ResponseEntity.ok(notificationDTOs);
     }
 }

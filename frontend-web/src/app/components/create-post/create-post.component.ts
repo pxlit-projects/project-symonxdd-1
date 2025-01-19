@@ -11,7 +11,6 @@ import { MatInputModule } from '@angular/material/input'; // For matInput
 import { MatButtonModule } from '@angular/material/button'; // For mat-raised-button
 import { RoleService } from '../../services/role/role.service';
 
-
 @Component({
   selector: 'app-create-post',
   imports: [
@@ -64,8 +63,6 @@ export class CreatePostComponent implements OnInit {
           // Optionally, show an error message
         }
       );
-    } else {
-      console.log('Form is invalid');
     }
   }
 }

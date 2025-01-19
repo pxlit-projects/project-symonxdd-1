@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
+import { RoleService } from '../role/role.service';
 
 @Injectable({
   providedIn: 'root',
@@ -13,11 +14,13 @@ export class ReviewService {
   private approveEndpoint = `${this.endpoint}/approve`;
   private rejectEndpoint = `${this.endpoint}/reject`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private roleService: RoleService) { }
 
   submitReview(payload: { postId: number; remarks: string; approved: boolean }): Observable<void> {
+    const headers = this.roleService.getHeaders();
+
     const url = payload.approved ? this.approveEndpoint : this.rejectEndpoint;
-    return this.http.post<void>(url, payload).pipe(catchError(this.handleError));
+    return this.http.post<void>(url, payload, { headers }).pipe(catchError(this.handleError));
   }
 
   private handleError(error: HttpErrorResponse): Observable<never> {

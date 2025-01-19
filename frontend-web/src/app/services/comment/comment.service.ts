@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/htt
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { Comment } from '../../models/comment';
+import { RoleService } from '../role/role.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +11,28 @@ import { Comment } from '../../models/comment';
 export class CommentService {
   private endpoint = `${environment.commentServiceBaseURL}/api/comments`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private roleService: RoleService, private http: HttpClient) { }
 
   postComment(comment: Comment): Observable<Comment> {
-    return this.http.post<Comment>(this.endpoint, comment);
+    return this.http.post<Comment>(this.endpoint, comment).pipe(
+      catchError(this.handleError) // Here we use the handleError method
+    );
   }
 
   deleteComment(commentId: number): Observable<void> {
-    return this.http.delete<void>(`${this.endpoint}/delete/${commentId}`);
+    const headers = this.roleService.getHeaders();
+    return this.http.delete<void>(`${this.endpoint}/delete/${commentId}`, { headers })
+      .pipe(catchError(this.handleError)); // Use catchError to forward the error to handleError
   }
 
   updateComment(updatedComment: Comment): Observable<HttpResponse<any>> {
-    return this.http.put<HttpResponse<any>>(`${this.endpoint}/edit/${updatedComment.id}`, updatedComment, { observe: 'response' })
+    const headers = this.roleService.getHeaders();
+    return this.http.put<HttpResponse<any>>(`${this.endpoint}/edit/${updatedComment.id}`, updatedComment, { headers })
       .pipe(catchError(this.handleError));
+  }
+
+  getCommentById(id: number): Observable<Comment> {
+    return this.http.get<Comment>(`${this.endpoint}/${id}`).pipe(catchError(this.handleError));
   }
 
   private handleError(error: HttpErrorResponse): Observable<never> {
@@ -32,9 +42,5 @@ export class CommentService {
     return throwError(
       'Something bad happened; please try again later.'
     );
-  }
-
-  getCommentById(id: number): Observable<Comment> {
-    return this.http.get<Comment>(`${this.endpoint}/${id}`);
   }
 }

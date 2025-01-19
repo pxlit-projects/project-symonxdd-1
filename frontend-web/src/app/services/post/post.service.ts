@@ -21,17 +21,20 @@ export class PostService {
   }
 
   getDrafts(): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.endpoint}/drafts`).pipe(
+    const headers = this.roleService.getHeaders();
+
+    return this.http.get<Post[]>(`${this.endpoint}/drafts`, { headers }).pipe(
       catchError(this.handleError)
     );
   }
 
   submitPostForReview(postId: number): Observable<Post> {
-    return this.http.post<Post>(`${this.endpoint}/submit-for-review`, postId).pipe(
+    const headers = this.roleService.getHeaders();
+
+    return this.http.post<Post>(`${this.endpoint}/submit-for-review`, postId, { headers }).pipe(
       catchError(this.handleError)
     );
   }
-
 
   getPostById(id: number): Observable<Post> {
     return this.http.get<Post>(`${this.endpoint}/${id}`).pipe(
@@ -40,19 +43,24 @@ export class PostService {
   }
 
   getUnpublishedPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.endpoint}/unpublished`).pipe(
+    const headers = this.roleService.getHeaders();
+    return this.http.get<Post[]>(`${this.endpoint}/unpublished`, { headers }).pipe(
       catchError(this.handleError)
     );
   }
 
   createPost(newPost: Post): Observable<Post> {
-    return this.http.post<Post>(this.endpoint, newPost).pipe(
+    const headers = this.roleService.getHeaders();
+
+    return this.http.post<Post>(this.endpoint, newPost, { headers }).pipe(
       catchError(this.handleError)
     );
   }
 
   updatePost(updatedPost: Post): Observable<HttpResponse<any>> {
-    return this.http.put<HttpResponse<any>>(`${this.endpoint}/${updatedPost.id}`, updatedPost, { observe: 'response' }).pipe(
+    const headers = this.roleService.getHeaders();
+
+    return this.http.put<HttpResponse<any>>(`${this.endpoint}/${updatedPost.id}`, updatedPost, { headers, observe: 'response' }).pipe(
       catchError(this.handleError)
     );
   }

@@ -36,6 +36,7 @@ export class NotificationsComponent implements OnInit {
     this.notificationService.getNotifications().subscribe({
       next: (data) => {
         this.notifications = data;
+        let testVar = 4;
       },
       error: (err) => {
         this.errorMessage = 'Error fetching notifications!';

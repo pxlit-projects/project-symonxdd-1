@@ -5,6 +5,7 @@ import be.pxl.services.domain.dto.CommentDTO;
 import be.pxl.services.domain.dto.CreateCommentRequest;
 import be.pxl.services.domain.dto.UpdateCommentRequest;
 import be.pxl.services.exception.ResourceNotFoundException;
+import be.pxl.services.exception.UnauthorizedActionException;
 import be.pxl.services.repo.CommentRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +20,7 @@ import org.slf4j.LoggerFactory;
 @Service
 @RequiredArgsConstructor
 public class CommentServiceImpl implements CommentService {
+
     private final CommentRepository commentRepository;
     private static final Logger logger = LoggerFactory.getLogger(CommentServiceImpl.class);
 
@@ -31,23 +33,32 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public void deleteComment(Long commentId) {
-        // Check if the comment exists before attempting deletion
-        if (!commentRepository.existsById(commentId)) {
-            throw new ResourceNotFoundException("Comment not found with id: " + commentId);
+    public void deleteComment(Long commentId, String role) {
+        // Retrieve the comment from the database
+        Comment comment = commentRepository.findById(commentId)
+                .orElseThrow(() -> new ResourceNotFoundException("Comment not found with id: " + commentId));
+
+        if (comment.getAuthor().equals(role)) {
+            commentRepository.deleteById(commentId);
+        } else {
+            throw new UnauthorizedActionException("User has no permission to delete this comment");
         }
-        commentRepository.deleteById(commentId);
+
         logger.info("Deleted a comment: {}", commentId);
     }
 
     @Override
-    public CommentDTO updateComment(Long id, UpdateCommentRequest request) {
+    public CommentDTO updateComment(Long id, UpdateCommentRequest request, String role) {
         Comment comment = commentRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Comment not found"));
-        request.updateEntity(comment);
+                .orElseThrow(() -> new ResourceNotFoundException("Comment not found" + id));
 
-        logger.info("Updated a comment: {}", comment);
-        return new CommentDTO(commentRepository.save(comment));
+        if (comment.getAuthor().equals(role)) {
+            request.updateEntity(comment);
+            logger.info("Updating a comment: {}", comment);
+            return new CommentDTO(commentRepository.save(comment));
+        } else {
+            throw new UnauthorizedActionException("User has no permission to update this comment");
+        }
     }
 
     @Override
